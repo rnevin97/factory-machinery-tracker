@@ -1,0 +1,162 @@
+<html lang="en"><!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+    <head>
+        <!-- Adding title for page, as it best SEO practice and improve the usability of your website. -->
+        <title>FAQs : SyncWare - Empowering Industrial Efficiency</title>
+        <link rel="stylesheet" href="static/css/faqs.css"><!--linking CSS to FAQs page-->
+        <meta name="viewport" content="width=device-width,initial-scale=1"><!--ensures webpages adopt to different devices-->
+    </head>
+    <body>
+        <div class="content">
+
+            <!-- Navigation and Logo Container -->
+             <!--provided title attribute on anchor links for accessibility-->
+             <div class="container-nav">
+                <a href="/home"><img alt="companylogo" class="logo" src="static/Images/LogoNew.png"></a>
+                <nav class="dropdown hide">
+                    <button class="menu-icon"></button>
+                    <div class="dropdown-content">
+                        <a href="/login" title="Register or Login">
+                         <button>Register / Login</button>
+                        </a>
+                        <a href="/home" title="Home : Navigation Menu">Home</a>
+                    <a href="/services" title="Services : Navigation Menu">Services</a>    
+                    <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
+                    <a class="selected" href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
+                    </div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+
+            <main>
+              <div class ="container-main">
+                <!--Section for contact us tag line and form-->
+                <section>
+                    <div class="container-content ">
+                        <span class="color-blue"><b>Are you ready to turn challenges into opportunities?</b></span>
+                        <span>Contact us today and begin your transformation journey!</span>
+                   </div>
+                   <!--Container for form-->
+                    <div class="container-form">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="fname">First Name:</label>
+                                    <input type="text" name="firstname" placeholder="Your Name">
+                                </div>
+                                <div class="form-column">
+                                    <label for="lname">Last Name:</label>
+                                    <input type="text" name="lastname" placeholder="Your Last Name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="cmp-name">Company Name:</label>
+                                    <input type="text" name="companyname" placeholder="Company Name">
+                                </div>
+                                <div class="form-column">
+                                    <label for="cmp-email">Company Email:</label>
+                                    <input type="text" name="companyemail" placeholder="Company Email">
+                                </div>
+                            </div>
+                             <div class="form-row">
+                                <div class="form-column">
+                                    <label for="phonenumber">Phone Number:</label>
+                                    <input type="text" name="phonenumber" placeholder="Phone Number">
+                                </div>
+                                <div class="form-column">
+                                    <label for="jobtitle">Job Title:</label>
+                                    <input type="text" name="jobtitle" placeholder="Job Title">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column textarea">
+                                    <label for="query">Query:</label>
+                                    <textarea type="text" id="query" name="query" placeholder="Your Query"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <button>Submit</button>
+                                </div>
+                            </div>
+                            
+                            
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+            </div>
+            <div class ="container-main-faq">
+                <div class="container-content-faq">
+                    <span class="color-blue"><b>Got Questions?</b></span>
+                    <span>We've Got Answers!</span>
+            </div>
+                   <!--Container for Q/A-->
+            <div class="container-form">
+                  <details>
+                      <summary>What is SyncWare?</summary>
+                        <div>
+                          SyncWare is an advanced manufacturing tracking system that provides real-time visibility into production processes, inventory, and workflow efficiency.
+                        </div>
+                  </details>
+                  <details>
+                    <summary>What industries can benefit from SyncWare?</summary>
+                      <div>
+                        SyncWare is designed for industries such as automotive, electronics, pharmaceuticals, food processing, textiles, and any manufacturing sector requiring precision tracking and workflow optimization.
+                      </div>
+                  </details>
+                  <details> <!--details tag creates disclosure widget--information is visible only when the widget is toggled into an open state -->
+                      <summary>How do I log in to the system?</summary> <!--The summary tag defines a visible heading for the details element -->
+                      <div>
+                        Use your company-issued credentials to log in via the  Portal. If you experience login issues, contact IT Support.
+                      </div>
+                  </details>
+                  <details>
+                      <summary>Can I access the system on mobile devices?</summary>
+                      <div>
+                        Yes, the system is mobile-friendly, allowing managers and repair teams to update machine status and requests on the go.
+                      </div>
+                  </details>
+                  <details>
+                      <summary>How can I check the real-time status of factory machines?</summary>
+                      <div>
+                          Go to the Machinery Status Dashboard, which provides a live overview of all machines and their operational states.     
+                      </div>
+                  </details>
+                  <details>
+                      <summary>What is the response time for repair requests?</summary>
+                      <div>
+                        <ul>
+                            <li>Critical (Machine Down) - Response within 2 hours</li>
+                            <li> Major Issues - Response within 8 hours</li>
+                            <li>Minor Issues - Response within 24 hours</li>
+                        </ul>
+                      </div>
+                  </details>
+                        
+              
+            </div>
+          </main>
+            <footer class="container-footer">
+                <div class="container-sections">
+                    <div class="container-subsections">
+                        <h2>The Company</h2>
+                        <a href="/about-us">About Us</a>
+                        
+                    </div>
+                    <div class="container-subsections">
+                        <h2>Navigation</h2>
+                        <a href="/home">Home</a>
+                        <a href="/services">Services</a>
+                        <a href="/about-us">About Us</a>
+                        <a href="/faqs">FAQs</a>
+                    </div>
+                </div>
+
+                <p>Copyright © 2025 All rights reserved by SyncWare</p>
+            </footer>
+        </div> 
+            
+    </body>
+</html>            

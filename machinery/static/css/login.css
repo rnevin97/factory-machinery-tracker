@@ -1,0 +1,121 @@
+@import url('styles.css'); /* Importing common CSS  */
+ 
+.container-main {
+    width: 100%;
+    height : 100vh;
+    position : absolute;
+    top : 0;
+    color : white;
+    
+    .container-content, .container-form {
+        width: 40%;
+        float: left;
+    }
+
+    .container-content {
+        position : absolute;
+        top : 70px;
+    }
+
+    .container-form {
+        position : absolute;
+        bottom : 10%;
+        right : 10%;
+        width: 30%;
+        background-color: white;
+        border : 2px solid #5517FF;
+        box-shadow: 3px 6px  #5517FF;
+        padding: 25px;
+        border-radius: 25px;
+        color : black;
+        input , textarea { /*input-type=text: a text input field, textarea: a multiline text input field*/
+            width: 100%;
+            padding: 12px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+    
+        }
+
+        .form-row {
+            display : flex;
+            flex-direction : column;
+            
+            .form-column {
+                margin : 10px;
+                
+                input {
+                    margin-bottom: 6px;
+                }
+                &.textarea {
+                    flex : 1
+                }
+            }
+        }
+    }
+
+    .container-content {
+        padding-top: 80px;
+        padding-left: 80px;
+        span {
+            font-size: 50px;
+        }
+
+        .register-message {
+            font-size : 40px;
+            a {
+               color : #d06b2a; 
+            }
+        }
+    }
+
+}
+
+/* media query is used to make web page responsive,  ensuring that web page adapts to different screen sizes*/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .container-main {
+        .container-content, .container-form {
+            width: 100%;
+            text-align: center;
+            padding-left: unset;
+            float : unset;
+            position : relative;
+            height : unset;
+        }
+
+        .container-form {
+            width : 90%;
+            margin : 80px auto;
+            text-align : left;
+            padding : 25px 0px;
+            right : unset;
+            bottom : unset;
+            
+        }
+
+        .container-content {
+            top : 10px;
+            text-align : left;
+            margin-left : 10px;
+            span {
+                font-size: 30px;
+            }
+    
+            .register-message {
+                font-size : 20px;
+            }
+        }
+
+    }
+
+    .container-form {
+        .form-row {
+            flex-direction : column;
+        }
+    }
+}
