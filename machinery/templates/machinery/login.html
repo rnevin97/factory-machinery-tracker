@@ -1,0 +1,82 @@
+<html lang="en"> <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+    <head>
+        <!-- Adding title for page, as it best SEO practice and improve the usability of your website.  -->
+        <title>Log In : SyncWare - Empowering Industrial Efficiency</title>
+        <link rel="stylesheet" href="static/css/login.css"><!--linking CSS to login page-->
+        <meta name="viewport" content="width=device-width,initial-scale=1"><!--ensures webpages adopt to different devices-->
+        <script src="static/js/login.js"></script> <!--Linking to javascript of login page-->
+        <script src="static/js/menu.js"></script>
+    </head>
+    <body onload="initialisePage()">
+        <div class="content">
+            <!-- Navigation and Logo Container -->
+             <!--provided title attribute on anchor links for accessibility-->
+             <div class="container-nav" onmouseleave="hideExpandMenu(event)">
+                <a href="/home"><img alt="companylogo" class="logo" src="static/Images/Logo.png"></a>
+                <nav class="container-nav-links"> <!--nav tag is used for top naviagtion-->
+                    <a href="/login" title="Register or Login"  onmouseover="hideExpandMenu(event)">
+                         <button>Register / Login</button>
+                    </a>
+                    <a href="/home" title="Home : Navigation Menu" onmouseover="hideExpandMenu(event)">Home</a>
+                    <a href="/about-us" title="About Us : Navigation Menu" onmouseover="hideExpandMenu(event)">About Us</a>
+                    <a href="/faqs" title="FAQs : Navigation Menu" onmouseover="hideExpandMenu(event)">FAQs</a>
+                </nav>
+                <!-- Drop down navigation for mobile phones-->
+                <nav class="dropdown hide">
+                    <button class="menu-icon"></button>
+                    <div class="dropdown-content">
+                        <a href="/login" title="Register or Login">
+                         <button>Register / Login</button>
+                        </a>
+                        <a href="/home" title="Home : Navigation Menu">Home</a>
+                    <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
+                    <a href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
+                    </div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+            
+            <main>
+                <div class="angled-bakground"></div> <!--Feature of angled background is used on Login page-->
+                <div class ="container-main">
+                    <div class="container-content ">
+                        <span><b>Login to your account!</b><br></span>
+                        <span class="register-message">Don't have an account yet!! <br><a href="/register">Register</a> with us today and begin your transformation journey!</span>
+                    </div>
+                    
+                    <div class="container-form">
+                        
+                        <form id="login-form" action="" method="post"">
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="email">Email:</label>
+                                    <input id="email" type="text" name="email"  required=true onfocusout="checkIfRequired('email')" >
+                                    <span class="warningMessage email"></span>
+                                </div>
+                                <div class="form-column">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" name="password" required=true onfocusout="checkIfRequired('password')" >
+                                    <span class="warningMessage password"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <button type="submit" onclick="submitForm(event)">Login</button> <!--button tag-->
+                                </div>
+                                
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="clear"></div>
+                    <div class="alertBox hide">
+                        <p class="message"></p>
+                        <a href="/login">
+                         <button>Retry LogIn</button>
+                         </a>
+                    </div>
+                </div>
+            </main>
+        </div> 
+    </body>
+</html>            

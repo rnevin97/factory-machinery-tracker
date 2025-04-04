@@ -1,0 +1,116 @@
+<html lang="en"> <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+    <head>
+        <!-- Adding title for page, as it best SEO practice and improve the usability of your website. -->
+        <title>Register : SyncWare - Empowering Industrial Efficiency</title>
+        <link rel="stylesheet" href="static/css/register.css"><!--linking CSS to registration page-->
+        <meta name="viewport" content="width=device-width,initial-scale=1"><!--ensures webpages adopt to different devices-->
+        <script src="static/js/registration.js"></script> <!--Linking to javascript of registration page-->
+        <script src="static/js/menu.js"></script> <!--Linking to menu javascript-->
+    </head>
+    <body onload="initialisePage()">
+        <div class="content">
+            <!-- Navigation and Logo Container -->
+             <!--provided title attribute on anchor links for accessibility-->
+             <div class="container-nav" onmouseleave="hideExpandMenu(event)"> <!--onmouseleave event-->
+                <a href="/home"><img alt="companylogo" class="logo" src="static/Images/Logo.png"></a>
+                <nav class="container-nav-links"> <!--nav tag is used for top naviagtion-->
+                    <a href="/login" title="Register or Login"  onmouseover="hideExpandMenu(event)">
+                         <button>Register / Login</button>
+                    </a>
+                    <a href="/home" title="Home : Navigation Menu" onmouseover="hideExpandMenu(event)">Home</a>
+                    <a href="/about-us" title="About Us : Navigation Menu" onmouseover="hideExpandMenu(event)">About Us</a>
+                    <a href="/faqs" title="FAQs : Navigation Menu" onmouseover="hideExpandMenu(event)">FAQs</a>
+                </nav>
+                <!-- Drop down navigation for mobile phones-->
+                <nav class="dropdown hide">
+                    <button class="menu-icon"></button>
+                    <div class="dropdown-content">
+                        <a href="/login" title="Register or Login">
+                         <button>Register / Login</button>
+                        </a>
+                        <a href="/home" title="Home : Navigation Menu">Home</a>
+                    <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
+                    <a href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
+                    </div>
+                </nav>
+                <div class="clear"></div>
+            </div>
+
+            <main>
+                <div class="angled-bakground"></div>
+                <div class ="container-main">
+                    <div class="container-content ">
+                        <span><b>Register for amazing journey - </b><br></span>
+                        <span class="register-message">with us today!</span>
+                    </div>
+                    <!--container is build for registration form-->
+                    <div class="container-form">
+                        <form id="reg-form" action="" method="post">
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="first-name">First Name*</label>
+                                    <input id="first-name" type="text" name="firstname" required=true onfocusout="checkIfRequired('first-name')">
+                                    <span class="warningMessage firstname"></span>
+                                </div>
+                                <div class="form-column">
+                                    <label for="last-name">Last Name*</label>
+                                    <input id="last-name" type="text" name="lastname" required=true onfocusout="checkIfRequired('last-name')">
+                                    <span class="warningMessage lastname"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="cmp-name">Company Name*</label>
+                                    <input id="cmp-name" type="text" name="companyname" required=true onfocusout="checkIfRequired('cmp-name')"> <!--onfocusout is sued to validate users-->
+                                    <span class="warningMessage companyname"></span>
+                                </div>
+                                <div class="form-column">
+                                    <label for="cmp-email">Email*</label>
+                                    <input id="cmp-email" type="email" name="companyemail" required=true onfocusout="checkIfRequired('cmp-email')">
+                                    <span class="warningMessage companyemail"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="phonenumber">Phone Number*</label>
+                                    <input id="phonenumber" type="tel" name="phonenumber" required=true onfocusout="checkIfRequired('phonenumber')">
+                                    <span class="warningMessage phonenumber"></span>
+                                </div>
+                                <div class="form-column">
+                                    <label for="jobtitle">Job Title</label>
+                                    <input id="jobtitle" type="text" name="jobtitle">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="password">Password*</label>
+                                    <input id="password" type="password" name="password" required=true onfocusout="checkIfRequired('password')">
+                                    <span class="warningMessage password"></span>
+                                </div>
+                                <div class="form-column">
+                                    <label for="confirm-password">Confirm Password*</label>
+                                    <input id="confirm-password" type="password" name="confirmpassword" required=true onfocusout="checkIfRequired('confirm-password')">
+                                    <span class="warningMessage confirm-password"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <button type="submit" onclick="registerForm(event)">Register</button> <!--button tag-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="alertBox hide">
+                    <p class="message"></p>
+                    <a href="/login">
+                         <button>Return to LogIn Page</button>
+                    </a>
+                </div>
+            </main>
+            
+        </div> 
+            
+    </body>
+</html>            

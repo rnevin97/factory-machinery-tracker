@@ -1,0 +1,105 @@
+@import url('styles.css'); 
+
+
+.container-main {
+    .container-image {
+        background-image: url("../Images/aboutUs.jpg"); /* setting background image*/
+    }
+}
+
+
+.container-our-vision{
+    padding: 60px;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    
+    span{
+        font-size: 25px;
+    }
+    
+}
+.container-our-values{
+    background-color: #D4AF37;
+    color: white;
+    padding: 50px 15px;
+    position: relative;
+    text-align: center;
+    
+    span{
+        
+        font-size: 25px;
+    }
+
+    .container-content{
+        background-color: #D4AF37;
+        color: white;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    
+        .container-values {
+            padding: 30px;
+            text-align: center;
+            width: 200px;
+            height: 220px;
+            border-radius: 5%;
+            color : black;
+            background-color : white;
+            position: relative;
+            font-size: 20px;
+            text-align: center;
+
+            h3 {
+                color : #5517FF;
+                margin : 0;
+            }
+        
+        }   
+        
+    }
+    
+}
+
+
+/* For mobile phones: */
+
+@media only screen and (max-width: 768px) {
+
+    .container-description {
+        padding: 8px;
+        font-size: 20px;
+        flex-direction : column;
+
+        .container-left-content, .container-right-content {
+            width: 100%;
+            margin : 10px;
+        }
+
+        .container-right-content::before{
+            width:100%;
+            background-color: white;
+            height:3px;
+            position:absolute;
+            top:-8px;
+            left : -9px;
+            content: "";
+        
+        }
+    }
+   
+
+    .container-our-values {
+    
+        .container-content {
+            flex-direction : column;
+            width : 100%;
+
+            .container-values {
+                 margin: auto;
+            }
+        }
+    }
+
+}    

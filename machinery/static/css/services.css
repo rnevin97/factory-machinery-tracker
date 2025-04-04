@@ -1,0 +1,58 @@
+@import url('styles.css'); /* Importing common CSS  */
+
+
+.container-parallax {
+    width: 100%;
+    background-image: url("../Images/builder.jpg");
+    position:sticky;
+    min-height: 500px;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: overlay;
+    overflow-y: scroll;
+    .container-content {
+        padding: 15px;
+        width: 45%;
+        height: 300px;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translate(-30% , -50%);
+        text-align: center;
+        background-color: white;
+        font-size: 20px;
+        margin: 20px;
+        &.two {
+            top: 110%;
+        }
+        &.three {
+            top: 170%;
+            bottom: 20%;
+            margin-bottom: 400px;
+        }
+        &.last {
+            top: 220%;
+            background-color: transparent;
+        }
+    }
+}
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    .container-parallax {
+        .container-content {
+            padding: 15px;
+            height: 340px;
+            left: 26%;
+            width: 80%;
+        }
+    }    
+}
+
+
+

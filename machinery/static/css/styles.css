@@ -1,0 +1,333 @@
+/* ------------Start : Helper styling classes --------------- */
+
+.color-blue {
+    color: #5517FF;
+}
+
+.champagne-yellow {
+    background-color: #D4AF37;
+}
+
+.color-yellow {
+    color:#D4AF37;
+}
+
+
+.clear {
+    clear: both;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* ------------End : Helper styling classes --------------- */
+
+
+/* ------------Start : Common element styling --------------- */
+
+
+html {
+    height : 100vh
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    max-width : 160rem;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+button {
+    background-color: #8f8884;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin-right: 12px;
+    color: white;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: inline-block;
+    font-size: 12px;
+}
+
+
+a , a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.alertBox {
+
+    max-width : 300px;
+    position : absolute;
+    border : 1px solid #d06b2a;
+    font-weight : 400px;
+    left : 50%;
+    top : 50%;
+    transform:translate(-50%, -50%);
+    z-index : 999;
+    display : flex;
+    justify-content : center;
+    padding : 30px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size : 25px;
+    flex-direction : column;
+    color : black;
+    text-align: center;
+}
+
+.warningMessage {
+    color: red;
+    font-size: 13px;
+}
+
+.content {
+    background-color: white;
+}
+
+.angled-bakground {
+    border-right: 100vw solid transparent;
+    border-top: calc(100vh - 80px) solid #8f8884;
+    content: "";
+    width: 0;
+    max-width:100%;
+    position : absolute;
+    .contactUsImage{
+        background-image: url("../Images/contactUs.PNG");
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
+
+}
+
+
+/* ------------End : Common element styling --------------- */
+
+
+
+/* ------------Start : Top Navigation styling --------------- */
+
+.container-nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 8px -2px rgba(0,0,0,.2);
+    z-index: 1;
+
+    .logo {
+        width: 130px;
+        height: 40px;
+        float: left;
+        margin : 10px 20px;
+    }
+}
+
+/* Sliding Navigation Styles  */
+.menu-icon {
+    background-image: url('../Images/menu-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    margin-right : unset;
+    background-color: transparent;
+}
+
+.dropdown {
+    display: block !important;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdown-content {
+    display: none; /* Keeping it none to hide menu content, will set it to block when menu is clicked */
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    right: -600px;
+    top: 50px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;    
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    &.selected {
+        color : #D4AF37;
+    }
+  }
+
+  .dropdown-content a:hover {
+    color : #D4AF37;
+}
+
+/* setting display content to block to show menu content on focus */
+.menu-icon:focus + .dropdown-content{
+    display: block;
+    right: -20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+ /* keeping display content to block when dropdown content is displayed, so we wont loose it when menu-icon is focused out */
+.dropdown-content:active { 
+    display: block;
+    right: -20px;
+    animation: slideIn 1s ease-in-out;
+} 
+
+@keyframes slideIn {
+    from {
+      right: -600px; /* Initial position */
+    }
+    to {
+      right: -20px; /* Final position */
+    }
+}
+
+
+/* ------------End : Top Navigation styling --------------- */
+
+
+/* ------------Start : Top Main Section Styling --------------- */
+
+.container-main {
+    width: 100%;
+
+    .container-content, .container-image {
+        width: 40%;
+        height: 300px;
+        float: left;
+    }
+
+    .container-image {
+        width: 50%;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 400px;
+    }
+
+    .container-content {
+        padding-top: 80px;
+        padding-left: 80px;
+        span {
+            font-size: 50px;
+        }
+    }
+
+}
+
+/* ------------End : Top Main Section Styling --------------- */
+
+
+/* ------------Start : Description Section Styling --------------- */
+
+.container-desc {
+    padding: 30px 130px;
+    background-color:#8f8884;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+/* ------------End : Description Section Styling --------------- */
+
+
+/* ------------Start : Footer Styling --------------- */
+
+.container-footer {
+    text-align: center;
+    box-shadow: 2px 2px 8px 2px rgba(0,0,0,.2);
+    background-color: #8f8884;
+    color: white;
+    margin-top : 100px;
+    font-size : 18px;
+    padding : 20px;
+    .container-sections {
+        display: flex;
+        justify-content :space-evenly;
+        gap: 20px;
+        padding: 20px 0px;
+        position: relative;
+        
+        .container-subsections {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .container-sections::after{
+        width:70%;
+        background-color: #D4AF37;
+        height:3px;
+        position:absolute;
+        bottom :0;
+        content: "";
+        left : 50%;
+        transform : translateX(-50%)
+    
+    }
+
+     .container-sections::before{
+        width:70%;
+        background-color: #D4AF37;
+        height:3px;
+        position:absolute;
+        top :20px;
+        content: "";
+        left : 50%;
+        transform : translateX(-50%)
+    
+    }
+        
+}
+
+
+/* ------------End : Footer Styling --------------- */
+
+@media only screen and (max-width: 768px) {
+
+    .container-main {
+        .container-content, .container-image {
+            width: 100%;
+            text-align: center;
+            padding-left: unset;
+        }
+
+        .container-image {
+            background-position: center;
+        }
+    }
+
+    .container-footer {
+        height: unset;
+        .container-sections {
+            flex-direction: column;
+        }
+    }
+
+}
