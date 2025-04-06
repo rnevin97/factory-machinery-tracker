@@ -37,7 +37,7 @@
             </div>
            
             <main>  <!--precious added code  in the main tag-->
-                <div class = "container";>
+               <div class = "container";>
         <div class = "page_2">
             <div class = "title">welcome back
                 <div style = "background-color: rgba(255, 250, 255, 0.296); 
@@ -50,9 +50,10 @@
             </div>
             <form class = "form" onsubmit="return check()" action="login.php" method="post" > 
             <div class = grid1>
-            <input type="Email" id = "email" placeholder="Email..." required autocomplete="off"  ><!--invalid email thats all should say on submit-->
+            <input type="Email" id = "email" placeholder="Email..." required autocomplete="off" onfocusout="checkField(this);"  ><!--invalid email thats all should say on submit-->
             <input type="password" placeholder="Password..." id = "password"  required minlength="5" maxlength="50"  
-                    pattern="^(?=.*[\W_]).{5,50}$"  title="Password must be 8-50 characters long and include at least one special character.">
+                    pattern="^(?=.*[\W_]).{5,50}$"  title="Password must be 8-50 characters long and include at least one special character."
+                    onfocusout="checkField(this);">
             </div>
             <div>
                 <button class = "sign_in">LOG IN </button>
@@ -73,6 +74,7 @@
                     </button></a>
             </div>
     </div>
+
 
             </main>
         </div> 
