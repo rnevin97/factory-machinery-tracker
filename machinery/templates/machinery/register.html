@@ -37,77 +37,63 @@
             </div>
 
             <main>
-                <div class="angled-bakground"></div>
-                <div class ="container-main">
-                    <div class="container-content ">
-                        <span><b>Register for amazing journey - </b><br></span>
-                        <span class="register-message">with us today!</span>
-                    </div>
-                    <!--container is build for registration form-->
-                    <div class="container-form">
-                        <form id="reg-form" action="" method="post">
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <label for="first-name">First Name*</label>
-                                    <input id="first-name" type="text" name="firstname" required=true onfocusout="checkIfRequired('first-name')">
-                                    <span class="warningMessage firstname"></span>
-                                </div>
-                                <div class="form-column">
-                                    <label for="last-name">Last Name*</label>
-                                    <input id="last-name" type="text" name="lastname" required=true onfocusout="checkIfRequired('last-name')">
-                                    <span class="warningMessage lastname"></span>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <label for="cmp-name">Company Name*</label>
-                                    <input id="cmp-name" type="text" name="companyname" required=true onfocusout="checkIfRequired('cmp-name')"> <!--onfocusout is sued to validate users-->
-                                    <span class="warningMessage companyname"></span>
-                                </div>
-                                <div class="form-column">
-                                    <label for="cmp-email">Email*</label>
-                                    <input id="cmp-email" type="email" name="companyemail" required=true onfocusout="checkIfRequired('cmp-email')">
-                                    <span class="warningMessage companyemail"></span>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <label for="phonenumber">Phone Number*</label>
-                                    <input id="phonenumber" type="tel" name="phonenumber" required=true onfocusout="checkIfRequired('phonenumber')">
-                                    <span class="warningMessage phonenumber"></span>
-                                </div>
-                                <div class="form-column">
-                                    <label for="jobtitle">Job Title</label>
-                                    <input id="jobtitle" type="text" name="jobtitle">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <label for="password">Password*</label>
-                                    <input id="password" type="password" name="password" required=true onfocusout="checkIfRequired('password')">
-                                    <span class="warningMessage password"></span>
-                                </div>
-                                <div class="form-column">
-                                    <label for="confirm-password">Confirm Password*</label>
-                                    <input id="confirm-password" type="password" name="confirmpassword" required=true onfocusout="checkIfRequired('confirm-password')">
-                                    <span class="warningMessage confirm-password"></span>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <button type="submit" onclick="registerForm(event)">Register</button> <!--button tag-->
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="clear"></div>
+             <div class = main_page>
+        <div class = "form";>
+            <div class ="page_1">
+                <div style = "margin-top:17rem;margin-left:10%;font-weight:bold;line-height:3.2rem;">
+                    Welcome back!<br>Register to become<br>
+                    <div style = "margin-left:3rem">a member</div>
                 </div>
-                <div class="alertBox hide">
-                    <p class="message"></p>
-                    <a href="/login">
-                         <button>Return to LogIn Page</button>
-                    </a>
+                
+            </div>
+
+        <form class = "page_2">
+            <div class = "title">Create an Account
+                <div style = "background-color: rgba(255, 250, 255, 0.296); 
+                               display:inline;padding:.3rem;margin-left:5rem;
+                               line-height:1rem; text-decoration:underline;
+                               text-underline-offset:2px;font-size: 1rem;
+                               color:rgba(0, 0, 0, 0.378);font-weight:550">
+                    <br>Register to become a member
                 </div>
+            </div>
+            <div class = grid1>
+                <input type="text" id="fullname" autocomplete="off" placeholder="Full Name" 
+                title="Please enter your full name" required minlength="2" 
+                maxlength="50" pattern="^[A-Za-z]+(?:\s+[A-Za-z]+)+$"  oninput="validateField(this);">
+                
+                <select id="job" required style ="max-width: 22.5vw;" oninput="validateField(this);">
+                    <option value="" disabled selected>Select a job</option>
+                    <option value="Manager">Technician</option>
+                    <option value="Technician">Repairer</option>
+                    <option value="Repairer">Manager</option>
+                </select>
+                
+                
+                <input type="Email" id = "email_pop" placeholder="Email" autocomplete="off" required;>
+                <input type="password" placeholder="Password" id = "password"  required minlength="5" maxlength="50"  
+                        pattern="^(?=.*[\W_]).{5,50}$"
+                        title="Password must be 5-50 characters long 
+                        and include at least one special character." oninput="validateField(this);">
+                <label id = "psword">Password must contain 5-50 characters  
+                    and<br>include at least one special character.</label>
+
+                <input type="password" placeholder="Re-type Password" 
+                id = "re-password" required minlength="5" 
+                maxlength="50" oninput="validateField(this);"
+                    oninput="this.setCustomValidity(this.value !== password.value ? 'Passwords must match.' : '')">  
+                    <!-- they will have to match-->
+            </div>
+            <div>
+                <button class = "sign_up" type = "submit" >SIGN UP </button>
+            </div>
+            <div class = "sign_in">
+                <span style = "background-color: rgba(255, 246, 255, 0.792);color:rgba(0, 0, 0, 0.378);">already have an account </span>
+                <span style = "cursor:pointer;color:rgb(47, 0, 156);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;"> <a style = "text-decoration:none;"href="sign_in.html">sign in</a></span>
+            </div>
+        </form>
+        </div>
+    </div>
             </main>
             
         </div> 
