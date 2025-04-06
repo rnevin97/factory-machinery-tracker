@@ -1,118 +1,147 @@
 @import url('styles.css'); /* Importing common CSS  */
-
-.container-main {
-    width: 100%;
-    position : relative;
-    color : white;
-    
-    .container-content, .container-form {
-        width: 40%;
-        float: left;
-    }
-
-    .container-form {
-        position : absolute;
-        top : 10%;
-        right : 10%;
-        width: 30%;
-        background-color: white;
-        border : 2px solid #5517FF;
-        box-shadow: 3px 6px  #5517FF;
-        padding: 25px;
-        border-radius: 25px;
-        color : black;
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid gray;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-    
-        }
-
-        .form-row {
-            display : flex;
-            flex-direction : row;
-            
-            .form-column {
-                margin : 10px;
-                width : 45%;
-
-                &.textarea {
-                    flex : 1
-                }
-            }
-        }
-    }
-
-    .container-content {
-        padding-top: 80px;
-        padding-left: 80px;
-        span {
-            font-size: 50px;
-        }
-
-        .register-message {
-            font-size : 40px;
-            a {
-               color : #d06b2a; 
-            }
-        }
-    }
-
+body{
+    font-family: sans-serif;
+    margin-left:0px;
+    opacity: 0;
+    transition:opacity .8s ease-out /*smooth fade effect*/;  
 }
 
-/* media query is used to make web page responsive,  ensuring that web page adapts to different screen sizes*/
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+/*background: linear-gradient(to right, rgba(108, 163, 235, 0.633), rgba(120, 70, 136, 0.856));-*/
+.main_page{
+    background-image:url('../pictures/pb.avif');
+    background-position: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
 
-    .container-main {
-        
-        .container-content, .container-form {
-            width: 100%;
-            text-align: center;
-            padding-left: unset;
-            padding-top : 30px;
-            float : unset;
-            position : relative;
-            height : unset;
-        }
+.form{
+    align-self: center;
+    width:75vw;
+    height:92vh;
+    display:flex;
+    box-shadow: 5px 10px 20px rgba(69, 54, 98, 0.306);
+    border-radius: 1rem;
+}
 
-        .container-form {
-            width : 94%;
-            margin : 40px auto;
-            text-align : left;
-            padding : 25px 0px;
-            right : unset;
-            bottom : unset;
+.page_1{
+    height:100%;
+    width:50%;
+    background-image:url('../pictures/purple.jpg');
+    background-image: contain;
+    background-position: center;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 1.3rem;;
+    border-top-left-radius: 1.3rem;
+    font-size: 3rem;
+    color:white;
+   
+}
 
-            .form-row {
-                flex-direction : column;
+.page_2 {
+    height:100%;
+    width:50%;
+    background-color: white;
+    border-bottom-right-radius: 1.3rem;
+    border-top-right-radius: 1.3rem;  
+   
+}
 
-                .form-column {
-                    width : 90%;
-                }
-            }
-            
-        }
+.title{
+    margin-top:5rem;
+    font-size: 2.5rem;
+    color:black;
+    margin-left: 18%;
+    margin-bottom:2rem;
+    font-weight: 550;
+    line-height:1.4rem;
+}
 
-        .container-content {
-            top : 10px;
-            text-align : left;
-            margin-left : 10px;
-            span {
-                font-size: 30px;
-            }
-    
-            .register-message {
-                font-size : 20px;
-            }
-        }
+.grid1{
+    margin-top:2.5rem;
+    margin-left: 20%;
+    display: grid;
+    flex-direction: column;
+}
 
-    }
 
-    
+.page_2 input,.page_2 select {
+    padding: 3.5px;
+    padding-inline:1rem;
+    font-size:1rem;
+    margin: 5px 5px;
+    border-radius: 1.5rem;
+    border: .5px solid #cccccc4b;
+    box-shadow:0px 0px 5px rgba(40, 49, 61, 0.05);
+    height: 5.5vh;
+    max-width:20vw;
+    color: black;
+    background-color: rgba(155, 190, 255, 0.202); /* Change this to any color you prefer */
+    display:block; 
+    background-color: rgba(251, 236, 254, 0.671);
+    outline:rgba(83, 0, 128, 0.891);
+}
+
+input:focus, select:focus{
+    border: .8px solid rgba(83, 0, 128, 0.891);
+}
+select{
+    -webkit-appearance: none; /* Removes default styles for Safari */
+    -moz-appearance: none; /* Removes default styles for Firefox */
+    appearance: none; /* Removes default styles (optional) */
+    cursor: pointer;
+    padding: 4px;
+    margin-top: 23px; 
+}
+
+option {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: rgba(254, 248, 255, 0.511) ;
+}
+option:disabled{
+   visibility: hidden;
+}
+
+/*    background-color: rgba(188, 168, 253, 0.202); /* Change this to any color you prefer */
+ 
+.page_2 label{
+    color:grey;
+    margin-top:0rem;
+    font-size:.8rem;
+    font-weight:100;
+    margin-left:6%;
+}
+
+.sign_up{
+    color:white;
+    background: rgba(83, 0, 128, 0.891);
+    outline:none;
+    border:none;
+    border-radius: 2rem;
+    width:20vw;
+    padding-top: 1.3rem;
+    padding-bottom:1.3rem;
+    font-size: 1rem;
+    margin-top:1.3rem;
+    margin-bottom:.9rem;
+    margin-left:25%;
+    cursor:pointer;
+}
+.sign_in{
+    margin-top:1.5rem;
+    margin-left:26%;
+}
+.sign_in a:hover{
+    color:rgb(59, 2, 143);
+    background-color:  rgba(252, 237, 255, 0.659);
+    padding:.3rem;
+    transition: ease-in-out .01s;
+}
+.sign_in a:active{ /* Turns purple after clicking the link*/
+    color:rgb(59, 2, 143);
+    text-decoration: underline;
 }
