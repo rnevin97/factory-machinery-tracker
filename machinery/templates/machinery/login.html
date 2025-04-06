@@ -35,47 +35,45 @@
                 </nav>
                 <div class="clear"></div>
             </div>
-            
-            <main>
-                <div class="angled-bakground"></div> <!--Feature of angled background is used on Login page-->
-                <div class ="container-main">
-                    <div class="container-content ">
-                        <span><b>Login to your account!</b><br></span>
-                        <span class="register-message">Don't have an account yet!! <br><a href="/register">Register</a> with us today and begin your transformation journey!</span>
-                    </div>
-                    
-                    <div class="container-form">
-                        
-                        <form id="login-form" action="" method="post"">
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <label for="email">Email:</label>
-                                    <input id="email" type="text" name="email"  required=true onfocusout="checkIfRequired('email')" >
-                                    <span class="warningMessage email"></span>
-                                </div>
-                                <div class="form-column">
-                                    <label for="password">Password</label>
-                                    <input id="password" type="password" name="password" required=true onfocusout="checkIfRequired('password')" >
-                                    <span class="warningMessage password"></span>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <button type="submit" onclick="submitForm(event)">Login</button> <!--button tag-->
-                                </div>
-                                
-                            </div>
-                        </form>
-                        
-                    </div>
-                    <div class="clear"></div>
-                    <div class="alertBox hide">
-                        <p class="message"></p>
-                        <a href="/login">
-                         <button>Retry LogIn</button>
-                         </a>
-                    </div>
+           
+            <main>  <!--precious added-->
+                <div class = "container";>
+        <div class = "page_2">
+            <div class = "title">welcome back
+                <div style = "background-color: rgba(255, 250, 255, 0.296); 
+                           display:inline;padding:.3rem;margin-left:5rem;
+                          text-underline-offset:2px;
+                           font-size: 1rem;color:rgba(69, 54, 98, 0.751);
+                           font-weight:550">
+                    <br><br>Thank you for getting back to us,<br> <span style = "color: rgb(192, 146, 59);color:rgb(1, 103, 54);">please login to access your account</span>
                 </div>
+            </div>
+            <form class = "form" onsubmit="return check()" action="login.php" method="post" > 
+            <div class = grid1>
+            <input type="Email" id = "email" placeholder="Email..." required autocomplete="off"  ><!--invalid email thats all should say on submit-->
+            <input type="password" placeholder="Password..." id = "password"  required minlength="5" maxlength="50"  
+                    pattern="^(?=.*[\W_]).{5,50}$"  title="Password must be 8-50 characters long and include at least one special character.">
+            </div>
+            <div>
+                <button class = "sign_in">LOG IN </button>
+            </div>
+        </form>
+            <div class = "forgot">
+                <span style = "color:rgba(0, 0, 0, 0.378);">Forgot your password? </span> <span style = "font-size:1.25rem;cursor:pointer;color: rgb(192, 146, 59);color:rgb(1, 103, 54);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;"> click the link</span>
+            </div>
+            </div>
+            <div class = "welcome_page">
+                <span style = "margin-top:13rem; text-align:center;">Welcome Back!<br>Log in to continue<br>
+                <span style = "font-size:1rem;color:white">Don't have an account yet?
+                   <a style = "text-decoration:none;color:white;" href = "register.html"> Sign up </a> </span>
+                </span>
+                <a href = "register.html">
+                    <button class = "sign_up" type = "submit">
+                        SIGN UP
+                    </button></a>
+            </div>
+    </div>
+
             </main>
         </div> 
     </body>
