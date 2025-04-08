@@ -10,17 +10,32 @@ function validateField(input) {
         // Display the error message once
        // input.reportValidity();
         error = true;
+        
 
     }
     // When input is valid, clear any custom error message
     else if (input.checkValidity()) {
         input.setCustomValidity('');
         input.style.border = "1px solid rgba(83, 0, 128, 0.891)";
-        if(input.id === "password"){
-            document.getElementById("psword").style.color = "rgba(83, 0, 128, 0.891);"
+        
+        if (input.id === "password" && input.checkValidity()) {
+            input.addEventListener("focusout", function() {
+                // Apply color to the password field when it loses focus
+                document.getElementById("psword").style.setProperty("color", "rgba(83, 0, 128, 0.891)", "important");
+            });
         }
-        error = false;
+        
+        if (input.id === "job") {
+            // Change color to black when the job input loses focus
+            input.addEventListener("focusout", function() {
+                this.style.setProperty("color", "black", "important");
+            });
+            error = false;
+        }
     }
+
 }
+
+
 
 
