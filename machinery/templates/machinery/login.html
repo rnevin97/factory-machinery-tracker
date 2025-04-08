@@ -13,14 +13,6 @@
              <!--provided title attribute on anchor links for accessibility-->
              <div class="container-nav" onmouseleave="hideExpandMenu(event)">
                 <a href="/home"><img alt="companylogo" class="logo" src="static/Images/Logo.png"></a>
-                <nav class="container-nav-links"> <!--nav tag is used for top naviagtion-->
-                    <a href="/login" title="Register or Login"  onmouseover="hideExpandMenu(event)">
-                         <button>Register / Login</button>
-                    </a>
-                    <a href="/home" title="Home : Navigation Menu" onmouseover="hideExpandMenu(event)">Home</a>
-                    <a href="/about-us" title="About Us : Navigation Menu" onmouseover="hideExpandMenu(event)">About Us</a>
-                    <a href="/faqs" title="FAQs : Navigation Menu" onmouseover="hideExpandMenu(event)">FAQs</a>
-                </nav>
                 <!-- Drop down navigation for mobile phones-->
                 <nav class="dropdown hide">
                     <button class="menu-icon"></button>
@@ -66,9 +58,9 @@
             <div class = "welcome_page">
                 <span style = "margin-top:13rem; text-align:center;">Welcome Back!<br>Log in to continue<br>
                 <span style = "font-size:1rem;color:white">Don't have an account yet?
-                   <a style = "text-decoration:none;color:white;" href = "register.html"> Sign up </a> </span>
+                   <a style = "text-decoration:none;color:white;" href = "/register"> Sign up </a> </span>
                 </span>
-                <a href = "register.html">
+                <a href = "/register">
                     <button class = "sign_up" type = "submit">
                         SIGN UP
                     </button></a>
