@@ -11,7 +11,7 @@ main{
     justify-content:center;
     align-items:center;
     min-height:100vh;
-    background-image:url('../pictures/lines.avif');
+    background-image:url('../Images/lines.avif');
     background-position: center;
     background-image: cover;
     background-color: rgb(208, 207, 207);
