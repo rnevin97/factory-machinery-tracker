@@ -4,6 +4,22 @@
 
 ![image](https://github.com/user-attachments/assets/6a3094b8-ba5f-419e-87a2-1be8aa65ad8c)
 
+![image](https://github.com/user-attachments/assets/21db995a-2d06-4064-9a4d-a970583fd534)
+
+![image](https://github.com/user-attachments/assets/df01fee6-2174-4dfb-a237-5a5ce1c5898c)
+
+![image](https://github.com/user-attachments/assets/1e0ab332-56a6-41ed-b354-47cf0668fd99)
+
+
+Testing Machine Page :
+1. You can add new Machine through queries at the moment
+INSERT INTO machinery_company (id,name,email,phone,job_title) VALUES ('1','TestComapny','test@test.com','123444','manager')
+
+INSERT INTO machinery_machine (id, name , serial_number, importance, status, company_id) VALUES ('1', 'Test Machinery' , 'SERIAL1123', '1', 'Working','1')
+2. Now when you load the machines pages, you should be able to see machine & delete them
+
+
+
 
 How to run a django project
 
