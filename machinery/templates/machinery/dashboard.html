@@ -1,33 +1,14 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="../css/dashboard.css">
-        <script src="../js/dashboard.js"></script>
-    </head>
-    <body onload="loadUserData()">
-        <h1>Registerd Users</h1>
-        <table id="reg-table">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>User Data</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
+{% extends 'machinery/base.html' %}
 
-        <h1>LoggedIn User</h1>
-        <table id="logged-table">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>User Data</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </body>
-</html>
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block extra_style %}
+ <link rel="stylesheet" href="{% static 'machinery/css/dashboard.css' %}">
+ {% endblock %}
+
+{% block content %}
+    <h1>Welcome</h1>
+    <p>Welcome to Dashboard</p>
+{% endblock %}

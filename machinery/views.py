@@ -26,4 +26,8 @@ def register(request):
 
 def services(request):
     context = {}
-    return render(request, "machinery/services.html",context)    
+    return render(request, "machinery/services.html",context)  
+
+def dashboard(request):
+    context = {}
+    return render(request, "machinery/dashboard.html",context)    

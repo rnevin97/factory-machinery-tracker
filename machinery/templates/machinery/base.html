@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machine Tracker - {% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'machinery/css/base.css' %}">
+    {% block extra_style %}{% endblock %}
+</head>
+<body>
+    <div class="main-base-container">
+        <!-- <div class="container-nav ">
+            <a href="/home"><img alt="companylogo" class="logo" src="{% static 'machinery/Images/LogoNew.png' %}"></a>
+            <button class="menu-icon"></button>
+            <div class="clear"></div>
+        </div> -->
+        <main>
+            <div class="main-row-layout">
+                <div class="dropdown-content">
+                    <h1>SyncWare</h1>
+                    <a href="/dashboard" title="Dashboard : Navigation Menu">Dashboard</a>
+                    <a href="/machines" title="Machines : Navigation Menu">Machines</a>    
+                    <a href="/technicians" title="Technicians : Navigation Menu">Technicians</a>
+                    <a href="/logout" title="Logout : Navigation Menu">Logout</a>
+                </div>
+                <div class="main-content-area">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
