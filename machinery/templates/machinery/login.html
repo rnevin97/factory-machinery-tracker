@@ -1,18 +1,18 @@
+{% load static %}
 <html lang="en"> <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
     <head>
         <!-- Adding title for page, as it best SEO practice and improve the usability of your website.  -->
         <title>Log In : SyncWare - Empowering Industrial Efficiency</title>
-        <link rel="stylesheet" href="static/css/login.css"><!--linking CSS to login page-->
+        <link rel="stylesheet" href="{% static 'machinery/css/login.css' %}">
         <meta name="viewport" content="width=device-width,initial-scale=1"><!--ensures webpages adopt to different devices-->
-        <script src="static/js/login.js"></script> <!--Linking to javascript of login page-->
-        <script src="static/js/menu.js"></script>
+        <script src="{% static 'machinery/js/login.js' %}"></script> <!--Linking to javascript of login page-->
     </head>
     <body onload="initialisePage()">
         <div class="content">
             <!-- Navigation and Logo Container -->
              <!--provided title attribute on anchor links for accessibility-->
              <div class="container-nav" onmouseleave="hideExpandMenu(event)">
-                <a href="/home"><img alt="companylogo" class="logo" src="static/Images/Logo.png"></a>
+                <a href="/home"><img alt="companylogo" class="logo" src="{% static 'machinery/Images/LogoNew.png' %}"></a>
                 <!-- Drop down navigation for mobile phones-->
                 <nav class="dropdown hide">
                     <button class="menu-icon"></button>
