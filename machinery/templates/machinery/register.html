@@ -36,8 +36,9 @@
                 <div class="clear"></div>
             </div>
 
-            <main>
-             <div class = main_page>
+<main>
+
+    <div class = main_page>
         <div class = "form";>
             <div class ="page_1">
                 <div style = "margin-top:17rem;margin-left:10%;font-weight:bold;line-height:3.2rem;">
@@ -70,7 +71,8 @@
                 </select>
                 
                 
-                <input type="Email" id = "email_pop" placeholder="Email" autocomplete="off" required;>
+                <input type="Email" id = "email_pop" placeholder="Email" autocomplete="off" required; 
+                oninput="validateField(this);">
                 <input type="password" placeholder="Password" id = "password"  required minlength="5" maxlength="50"  
                         pattern="^(?=.*[\W_]).{5,50}$"
                         title="Password must be 5-50 characters long 
@@ -94,9 +96,8 @@
         </form>
         </div>
     </div>
-            </main>
-            
-        </div> 
+
+</main>
             
     </body>
 </html>            
