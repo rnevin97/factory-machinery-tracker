@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import login_user, logout_user, RegistrationAPIView
+from . import api_views  # 👈 new import for your API views
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
@@ -18,9 +18,9 @@ urlpatterns = [
     path("addMachine", views.addMachine, name="addMachine"),
     path("deleteMachine/<int:id>", views.deleteMachine, name="deleteMachine"),
 
-    # API Routes
-    path("api/login/", login_user, name="api_login"),
-    path("api/logout/", logout_user, name="api_logout"),
-    path("api/register/", RegistrationAPIView.as_view(), name="api_register"),
+    # API Routes (from api_views)
+    path("api/login/", api_views.login_user, name="api_login"),
+    path("api/logout/", api_views.logout_user, name="api_logout"),
+    path("api/register/", api_views.RegistrationAPIView.as_view(), name="api_register"),
     path("api/token-auth/", obtain_auth_token),
 ]
