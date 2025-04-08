@@ -67,11 +67,15 @@
     /* setting display content to block to show menu content on focus */
     .menu-icon:focus + .dropdown-content{
         display: block;
+        right: unset;
+        animation: unset;
     }
     
      /* keeping display content to block when dropdown content is displayed, so we wont loose it when menu-icon is focused out */
     .dropdown-content:active { 
         display: block;
+        right: unset;
+        animation: unset;
     } 
 
     .main-content-area {
@@ -79,5 +83,33 @@
         flex: 1;
     }
     
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    margin: 10px 0px;
+
+    td , th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 12px;
+
+        a{
+            padding: 10x;
+            border-radius: 15px;
+        }
+
+        button {
+            &.modify {
+                background: green;
+            }
+            &.delete {
+                background: red;
+            }
+        }
+    }
 }
 

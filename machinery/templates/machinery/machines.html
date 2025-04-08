@@ -1,0 +1,44 @@
+{% extends 'machinery/base.html' %}
+
+{% load static %}
+
+{% block title %}Machines{% endblock %}
+
+{% block extra_style %}
+ <link rel="stylesheet" href="{% static 'machinery/css/machines.css' %}">
+ {% endblock %}
+
+{% block content %}
+    <a href="/addMachine"> <button>New Machine</button></a>
+    <table id="machines-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Company ID</th>
+                <th>Name</th>
+                <th>Serial Number</th>
+                <th>Importance</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if data %} 
+               {% for machine in data %}
+                  <tr>
+                    <td>{{machine.id}}</td>
+                    <td>{{machine.company_id}}</td>
+                    <td>{{machine.name}}</td>
+                    <td>{{machine.serial_number}}</td>
+                    <td>{{machine.importance}}</td>
+                    <td>{{machine.status}}</td>
+                    <td>
+                        <a href="/modifyMachine/{{machine.id}}"><button class="modify">Modify</button></a>
+                        <a href="/deleteMachine/{{machine.id}}"><button class="delete">Delete</button></a>
+                    </td>
+                  </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
