@@ -1,8 +1,9 @@
+{% load static %}
 <html lang="en"> <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
     <head>
         <!-- Adding title for page, as it best SEO practice and improve the usability of your website. -->
         <title>Services - Empowering Industrial Efficiency</title>
-        <link rel="stylesheet" href="static/css/services.css"> <!--linking CSS to index page-->
+        <link rel="stylesheet" href="{% static 'machinery/css/services.css' %}">
         <meta name="viewport" content="width=device-width,initial-scale=1"> <!--ensures webpages adopt to different devices-->
     </head>
     <body>
@@ -10,7 +11,7 @@
            <!-- Navigation and Logo Container -->
             <!--provided title attribute on anchor links for accessibility-->
             <div class="container-nav">
-                <a href="/home"><img alt="companylogo" class="logo" src="static/Images/LogoNew.png"></a>
+                <a href="/home"><img alt="companylogo" class="logo" src="{% static 'machinery/Images/LogoNew.png' %}"></a>
                 <nav class="dropdown">
                     <button class="menu-icon"></button>
                     <div class="dropdown-content">

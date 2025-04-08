@@ -1,0 +1,5 @@
+@import url('styles.css'); 
+
+td, th {
+    border: 1px solid transparent !important;
+}
