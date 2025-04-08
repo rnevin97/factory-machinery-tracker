@@ -7,8 +7,10 @@ body{
 }
 
 /*background: linear-gradient(to right, rgba(108, 163, 235, 0.633), rgba(120, 70, 136, 0.856));-*/
+    /*background: linear-gradient(to right, rgba(108, 163, 235, 0.633), rgba(120, 70, 136, 0.856));-*/
+
 .main_page{
-    background-image:url('../Images/pb.avif');
+    background-image:url('../pictures/pb.avif');
     background-position: cover;
     display: flex;
     flex-direction: column;
@@ -29,7 +31,7 @@ body{
 .page_1{
     height:100%;
     width:50%;
-    background-image:url('../Images/purple.jpg');
+    background-image:url('../pictures/purple.jpg');
     background-image: contain;
     background-position: center;
     background-position-y: 100%;
@@ -67,7 +69,6 @@ body{
     flex-direction: column;
 }
 
-
 .page_2 input,.page_2 select {
     padding: 3.5px;
     padding-inline:1rem;
@@ -86,7 +87,7 @@ body{
 }
 
 input:focus, select:focus{
-    border: .8px solid rgba(83, 0, 128, 0.891);
+    border: .9px solid rgba(83, 0, 128, 0.891);
 }
 select{
     -webkit-appearance: none; /* Removes default styles for Safari */
@@ -95,6 +96,7 @@ select{
     cursor: pointer;
     padding: 4px;
     margin-top: 23px; 
+    color:grey !important;
 }
 
 option {
@@ -145,3 +147,4 @@ option:disabled{
     color:rgb(59, 2, 143);
     text-decoration: underline;
 }
+
