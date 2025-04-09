@@ -9,7 +9,7 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
-from .models import Machine, RepairRequest, MaintenanceRecord, Warning, UserProfile
+from .models import Machine, RepairRequest, MaintenanceRecord, Warning, UserProfile, Company
 from .serializers import (
     MachineSerializer,
     RepairRequestSerializer,
@@ -82,13 +82,17 @@ class RegistrationAPIView(APIView):
         username = request.data.get('username')
         password = request.data.get('password')
         email = request.data.get('email')
-        role = request.data.get('role', 'technician')
-
+        role = request.data.get('role')
+        firstName = request.data.get('firstName')
+        lastName = request.data.get('lastName')
+        company = request.data.get('companyName')
+        
         if User.objects.filter(username=username).exists():
             return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
 
-        user = User.objects.create_user(username=username, password=password, email=email)
+        user = User.objects.create_user(username=username, password=password, email=email, first_name=firstName, last_name=lastName)
         UserProfile.objects.create(user=user, role=role)
+        Company.objects.create(name=company, email=email, job_title=role)
         Token.objects.create(user=user)
 
         return Response({'message': 'User registered successfully.', "redirect_url": "/login"}, status=status.HTTP_201_CREATED)

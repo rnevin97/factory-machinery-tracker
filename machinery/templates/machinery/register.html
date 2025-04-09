@@ -55,15 +55,27 @@
                                 </div>
                             </div>
                             <div class=grid1>
-                                <input name="username" type="text" id="fullname" autocomplete="off" placeholder="Full Name"
+                                <input name="userName" type="text" id="userName" autocomplete="off" placeholder="User Name"
                                     title="Please enter your full name" required minlength="2" maxlength="50"
                                      oninput="validateField(this);">
+                                
+                                <input name="firstName" type="text" id="firstName" autocomplete="off" placeholder="First Name"
+                                title="" required minlength="2" maxlength="50"
+                                 oninput="validateField(this);">
+                                 
+                                <input name="lastName" type="text" id="lastName" autocomplete="off" placeholder="Last Name"
+                                 title="" required minlength="2" maxlength="50"
+                                  oninput="validateField(this);">
 
-                                <select id="job" required style="max-width: 22.5vw;" oninput="validateField(this);">
+                                <input name="companyName" type="text" id="companyName" autocomplete="off" placeholder="Company Name"
+                                title="" required minlength="2" maxlength="50"
+                                oninput="validateField(this);">
+
+                                <select name="role" id="job" required style="max-width: 22.5vw;" oninput="validateField(this);">
                                     <option value="" disabled selected>Select a job</option>
-                                    <option value="Manager">Technician</option>
-                                    <option value="Technician">Repairer</option>
-                                    <option value="Repairer">Manager</option>
+                                    <option value="Technician">Technician</option>
+                                    <option value="Repairer">Repairer</option>
+                                    <option value="Manager">Manager</option>
                                 </select>
 
 
