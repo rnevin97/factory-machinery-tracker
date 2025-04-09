@@ -1,3 +1,32 @@
+function initialisePage() {
+
+    document.getElementById("regForm").addEventListener("submit", async function(e) {
+
+        e.preventDefault();
+    
+        const formData = new FormData(this);
+        const username = formData.get("username");
+        const password = formData.get("password");
+    
+        const registerRes = await fetch("/api/register/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password })
+        });
+        
+       
+        if (registerRes.ok) {
+            await registerRes.json().then((res)=>{
+                console.log(res)
+                window.location.href = res.redirect_url;
+            })
+        } else {
+            alert("Registration failed");
+        }
+    });
+
+}
+
 window.addEventListener("load", function () {
     document.body.style.opacity = 1;
  });
@@ -35,6 +64,7 @@ function validateField(input) {
     }
 
 }
+
 
 
 

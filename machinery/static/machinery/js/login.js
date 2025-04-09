@@ -1,3 +1,33 @@
+function initialisePage() {
+
+    document.getElementById("loginForm").addEventListener("submit", async function(e) {
+        
+        e.preventDefault();
+    
+        const formData = new FormData(this);
+        const username = formData.get("username");
+        const password = formData.get("password");
+    
+        const loginRes = await fetch("/api/login/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password })
+        });
+        
+       
+        if (loginRes.ok) {
+            await loginRes.json().then((res)=>{
+                console.log(res)
+                window.location.href = res.redirect_url;
+            })
+        } else {
+            alert("Login failed");
+        }
+    });
+
+}
+
+
 window.addEventListener("load", function () {
     document.body.style.opacity = 1;
  });

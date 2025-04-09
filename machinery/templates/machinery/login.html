@@ -1,74 +1,84 @@
 {% load static %}
-<html lang="en"> <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+<html lang="en">
+<!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+
     <head>
         <!-- Adding title for page, as it best SEO practice and improve the usability of your website.  -->
         <title>Log In : SyncWare - Empowering Industrial Efficiency</title>
         <link rel="stylesheet" href="{% static 'machinery/css/login.css' %}">
-        <meta name="viewport" content="width=device-width,initial-scale=1"><!--ensures webpages adopt to different devices-->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--ensures webpages adopt to different devices-->
         <script src="{% static 'machinery/js/login.js' %}"></script> <!--Linking to javascript of login page-->
     </head>
+
     <body onload="initialisePage()">
         <div class="content">
             <!-- Navigation and Logo Container -->
-             <!--provided title attribute on anchor links for accessibility-->
-             <div class="container-nav" onmouseleave="hideExpandMenu(event)">
+            <!--provided title attribute on anchor links for accessibility-->
+            <div class="container-nav" onmouseleave="hideExpandMenu(event)">
                 <a href="/home"><img alt="companylogo" class="logo" src="{% static 'machinery/Images/LogoNew.png' %}"></a>
                 <!-- Drop down navigation for mobile phones-->
                 <nav class="dropdown hide">
                     <button class="menu-icon"></button>
                     <div class="dropdown-content">
                         <a href="/login" title="Register or Login">
-                         <button>Register / Login</button>
+                            <button>Register / Login</button>
                         </a>
                         <a href="/home" title="Home : Navigation Menu">Home</a>
-                    <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
-                    <a href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
+                        <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
+                        <a href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
                     </div>
                 </nav>
                 <div class="clear"></div>
             </div>
-           
-            <main>  <!--precious added code  in the main tag-->
-               <div class = "container";>
-        <div class = "page_2">
-            <div class = "title">welcome back
-                <div style = "background-color: rgba(255, 250, 255, 0.296); 
-                           display:inline;padding:.3rem;margin-left:5rem;
-                          text-underline-offset:2px;
-                           font-size: 1rem;color:rgba(69, 54, 98, 0.751);
-                           font-weight:550">
-                    <br><br>Thank you for getting back to us,<br> <span style = "color: rgb(192, 146, 59);color:rgb(1, 103, 54);">please login to access your account</span>
+
+            <main> <!--precious added code  in the main tag-->
+                <div class="container" ;>
+                    <div class="page_2">
+                        <div class="title">welcome back
+                            <div style="background-color: rgba(255, 250, 255, 0.296); 
+                            display:inline;padding:.3rem;margin-left:5rem;
+                            text-underline-offset:2px;
+                            font-size: 1rem;color:rgba(69, 54, 98, 0.751);
+                            font-weight:550">
+                                <br><br>Thank you for getting back to us,<br> <span
+                                    style="color: rgb(192, 146, 59);color:rgb(1, 103, 54);">please login to access your
+                                    account</span>
+                            </div>
+                        </div>
+                        <form class="form" onsubmit="return check()" id="loginForm" method="post">
+                            <div class=grid1>
+
+                                <input name="username" type="text" id="username" placeholder="username..." required
+                                    autocomplete="off"
+                                    onfocusout="checkField(this);"><!--invalid email thats all should say on submit-->
+                                <input name="password" type="password" placeholder="Password..." id="password" required
+                                    minlength="5" maxlength="50" pattern="^(?=.*[\W_]).{5,50}$"
+                                    title="Password must be 8-50 characters long and include at least one special character."
+                                    onfocusout="checkField(this);">
+                            </div>
+                            <div>
+                                <button class="sign_in">LOG IN </button>
+                            </div>
+                        </form>
+                        <div class="forgot">
+                            <span style="color:rgba(0, 0, 0, 0.378);">Forgot your password? </span> <span
+                                style="font-size:1.25rem;cursor:pointer;color: rgb(192, 146, 59);color:rgb(1, 103, 54);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;">
+                                click the link</span>
+                        </div>
+                    </div>
+                    <div class="welcome_page">
+                        <span style="margin-top:13rem; text-align:center;">Welcome Back!<br>Log in to continue<br>
+                            <span style="font-size:1rem;color:white">Don't have an account yet?
+                                <a style="text-decoration:none;color:white;" href="/register"> Sign up </a> </span>
+                        </span>
+                        <a href="/register">
+                            <button class="sign_up" type="submit">
+                                SIGN UP
+                            </button></a>
+                    </div>
                 </div>
-            </div>
-            <form class = "form" onsubmit="return check()" action="login.php" method="post" > 
-            <div class = grid1>
-            <input type="Email" id = "email" placeholder="Email..." required autocomplete="off" onfocusout="checkField(this);"  ><!--invalid email thats all should say on submit-->
-            <input type="password" placeholder="Password..." id = "password"  required minlength="5" maxlength="50"  
-                    pattern="^(?=.*[\W_]).{5,50}$"  title="Password must be 8-50 characters long and include at least one special character."
-                    onfocusout="checkField(this);">
-            </div>
-            <div>
-                <button class = "sign_in">LOG IN </button>
-            </div>
-        </form>
-            <div class = "forgot">
-                <span style = "color:rgba(0, 0, 0, 0.378);">Forgot your password? </span> <span style = "font-size:1.25rem;cursor:pointer;color: rgb(192, 146, 59);color:rgb(1, 103, 54);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;"> click the link</span>
-            </div>
-            </div>
-            <div class = "welcome_page">
-                <span style = "margin-top:13rem; text-align:center;">Welcome Back!<br>Log in to continue<br>
-                <span style = "font-size:1rem;color:white">Don't have an account yet?
-                   <a style = "text-decoration:none;color:white;" href = "/register"> Sign up </a> </span>
-                </span>
-                <a href = "/register">
-                    <button class = "sign_up" type = "submit">
-                        SIGN UP
-                    </button></a>
-            </div>
-    </div>
-
-
             </main>
-        </div> 
+        </div>
     </body>
-</html>            
+</html>

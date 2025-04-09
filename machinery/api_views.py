@@ -60,7 +60,7 @@ def login_user(request):
             role = UserProfile.objects.get(user=user).role
         except UserProfile.DoesNotExist:
             role = None
-        return Response({'token': token.key, 'role': role})
+        return Response({'token': token.key, 'role': role, "redirect_url": "/dashboard"})
     
     return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -91,4 +91,4 @@ class RegistrationAPIView(APIView):
         UserProfile.objects.create(user=user, role=role)
         Token.objects.create(user=user)
 
-        return Response({'message': 'User registered successfully.'}, status=status.HTTP_201_CREATED)
+        return Response({'message': 'User registered successfully.', "redirect_url": "/login"}, status=status.HTTP_201_CREATED)
