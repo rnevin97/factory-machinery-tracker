@@ -1,95 +1,99 @@
 {% load static %}
-<html lang="en"> <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+<html lang="en">
+<!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
+
     <head>
         <!-- Adding title for page, as it best SEO practice and improve the usability of your website. -->
         <title>Register : SyncWare - Empowering Industrial Efficiency</title>
         <link rel="stylesheet" href="{% static 'machinery/css/register.css' %}">
-        <meta name="viewport" content="width=device-width,initial-scale=1"><!--ensures webpages adopt to different devices-->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!--ensures webpages adopt to different devices-->
         <script src="{% static 'machinery/js/registration.js' %}"></script>
     </head>
+
     <body onload="initialisePage()">
         <div class="content">
             <!-- Navigation and Logo Container -->
-             <!--provided title attribute on anchor links for accessibility-->
-             <div class="container-nav" onmouseleave="hideExpandMenu(event)"> <!--onmouseleave event-->
+            <!--provided title attribute on anchor links for accessibility-->
+            <div class="container-nav" onmouseleave="hideExpandMenu(event)"> <!--onmouseleave event-->
                 <a href="/home"><img alt="companylogo" class="logo" src="{% static 'machinery/Images/LogoNew.png' %}"></a>
                 <!-- Drop down navigation for mobile phones-->
                 <nav class="dropdown hide">
                     <button class="menu-icon"></button>
                     <div class="dropdown-content">
                         <a href="/login" title="Register or Login">
-                         <button>Register / Login</button>
+                            <button>Register / Login</button>
                         </a>
                         <a href="/home" title="Home : Navigation Menu">Home</a>
-                    <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
-                    <a href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
+                        <a href="/about-us" title="About Us : Navigation Menu">About Us</a>
+                        <a href="/faqs" title="FAQs : Navigation Menu">FAQs</a>
                     </div>
                 </nav>
                 <div class="clear"></div>
             </div>
 
-<main>
+            <main>
 
-    <div class = main_page>
-        <div class = "form";>
-            <div class ="page_1">
-                <div style = "margin-top:17rem;margin-left:10%;font-weight:bold;line-height:3.2rem;">
-                    Welcome back!<br>Register to become<br>
-                    <div style = "margin-left:3rem">a member</div>
+                <div class=main_page>
+                    <div class="form">
+                        <div class="page_1">
+                            <div style="margin-top:17rem;margin-left:10%;font-weight:bold;line-height:3.2rem;">
+                                Welcome back!<br>Register to become<br>
+                                <div style="margin-left:3rem">a member</div>
+                            </div>
+                        </div>
+
+                        <form class="page_2" id="regForm" method="post">
+                            {% csrf_token %}
+                            <div class="title">Create an Account
+                                <div style="background-color: rgba(255, 250, 255, 0.296); 
+                                display:inline;padding:.3rem;margin-left:5rem;
+                                line-height:1rem; text-decoration:underline;
+                                text-underline-offset:2px;font-size: 1rem;
+                                color:rgba(0, 0, 0, 0.378);font-weight:550">
+                                    <br>Register to become a member
+                                </div>
+                            </div>
+                            <div class=grid1>
+                                <input name="username" type="text" id="fullname" autocomplete="off" placeholder="Full Name"
+                                    title="Please enter your full name" required minlength="2" maxlength="50"
+                                     oninput="validateField(this);">
+
+                                <select id="job" required style="max-width: 22.5vw;" oninput="validateField(this);">
+                                    <option value="" disabled selected>Select a job</option>
+                                    <option value="Manager">Technician</option>
+                                    <option value="Technician">Repairer</option>
+                                    <option value="Repairer">Manager</option>
+                                </select>
+
+
+                                <input name="email" type="Email" id="email_pop" placeholder="Email" autocomplete="off"
+                                    required; oninput="validateField(this);">
+                                <input name="password" type="password" placeholder="Password" id="password" required
+                                    minlength="5" maxlength="50" pattern="^(?=.*[\W_]).{5,50}$" title="Password must be 5-50 characters long 
+                            and include at least one special character." oninput="validateField(this);">
+                                <label id="psword">Password must contain 5-50 characters
+                                    and<br>include at least one special character.</label>
+
+                                <input type="password" placeholder="Re-type Password" id="re-password" required
+                                    minlength="5" maxlength="50" oninput="validateField(this);"
+                                    oninput="this.setCustomValidity(this.value !== password.value ? 'Passwords must match.' : '')">
+                                <!-- they will have to match-->
+                            </div>
+                            <div>
+                                <button class="sign_up" type="submit">SIGN UP </button>
+                            </div>
+                            <div class="sign_in">
+                                <span
+                                    style="background-color: rgba(255, 246, 255, 0.792);color:rgba(0, 0, 0, 0.378);">already
+                                    have an account </span>
+                                <span
+                                    style="cursor:pointer;color:rgb(47, 0, 156);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;">
+                                    <a style="text-decoration:none;" href="sign_in.html">sign in</a></span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-            </div>
-
-        <form class = "page_2">
-            <div class = "title">Create an Account
-                <div style = "background-color: rgba(255, 250, 255, 0.296); 
-                               display:inline;padding:.3rem;margin-left:5rem;
-                               line-height:1rem; text-decoration:underline;
-                               text-underline-offset:2px;font-size: 1rem;
-                               color:rgba(0, 0, 0, 0.378);font-weight:550">
-                    <br>Register to become a member
-                </div>
-            </div>
-            <div class = grid1>
-                <input type="text" id="fullname" autocomplete="off" placeholder="Full Name" 
-                title="Please enter your full name" required minlength="2" 
-                maxlength="50" pattern="^[A-Za-z]+(?:\s+[A-Za-z]+)+$"  oninput="validateField(this);">
-                
-                <select id="job" required style ="max-width: 22.5vw;" oninput="validateField(this);">
-                    <option value="" disabled selected>Select a job</option>
-                    <option value="Manager">Technician</option>
-                    <option value="Technician">Repairer</option>
-                    <option value="Repairer">Manager</option>
-                </select>
-                
-                
-                <input type="Email" id = "email_pop" placeholder="Email" autocomplete="off" required; 
-                oninput="validateField(this);">
-                <input type="password" placeholder="Password" id = "password"  required minlength="5" maxlength="50"  
-                        pattern="^(?=.*[\W_]).{5,50}$"
-                        title="Password must be 5-50 characters long 
-                        and include at least one special character." oninput="validateField(this);">
-                <label id = "psword">Password must contain 5-50 characters  
-                    and<br>include at least one special character.</label>
-
-                <input type="password" placeholder="Re-type Password" 
-                id = "re-password" required minlength="5" 
-                maxlength="50" oninput="validateField(this);"
-                    oninput="this.setCustomValidity(this.value !== password.value ? 'Passwords must match.' : '')">  
-                    <!-- they will have to match-->
-            </div>
-            <div>
-                <button class = "sign_up" type = "submit" >SIGN UP </button>
-            </div>
-            <div class = "sign_in">
-                <span style = "background-color: rgba(255, 246, 255, 0.792);color:rgba(0, 0, 0, 0.378);">already have an account </span>
-                <span style = "cursor:pointer;color:rgb(47, 0, 156);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;"> <a style = "text-decoration:none;"href="sign_in.html">sign in</a></span>
-            </div>
-        </form>
-        </div>
-    </div>
-
-</main>
-            
+            </main>
     </body>
-</html>            
+</html>
