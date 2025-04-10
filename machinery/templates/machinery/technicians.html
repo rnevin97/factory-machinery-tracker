@@ -9,6 +9,32 @@
  {% endblock %}
 
 {% block content %}
-    <h1>Welcome</h1>
-    <p>Technicians Page</p>
+    <h1>Available Technicians</h1>
+    <table id="technicians-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UserName</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date Joined</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if data %} 
+               {% for tech in data %}
+                  <tr>
+                    <td>{{tech.id}}</td>
+                    <td>{{tech.userName}}</td>
+                    <td>{{tech.firstName}}</td>
+                    <td>{{tech.lastName}}</td>
+                    <td>{{tech.email}}</td>
+                    <td>{{tech.dateJoined}}</td>
+                    
+                  </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
 {% endblock %}

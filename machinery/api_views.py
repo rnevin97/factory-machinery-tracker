@@ -53,7 +53,7 @@ def login_user(request):
     username = request.data.get('username')
     password = request.data.get('password')
     user = authenticate(username=username, password=password)
-
+    request.session['id'] = user.id
     if user:
         token, created = Token.objects.get_or_create(user=user)
         try:
