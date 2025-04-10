@@ -13,11 +13,16 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("services", views.services, name="services"),
     path("dashboard", views.dashboard, name="dashboard"),
-    path("machines", views.machines, name="machines"),
     path("technicians", views.technicians, name="technicians"),
+    path("machines", views.machines, name="machines"),
     path("addMachine", views.addMachine, name="addMachine"),
     path("deleteMachine/<int:id>", views.deleteMachine, name="deleteMachine"),
     path("modifyMachine/<int:id>/", views.modifyMachine, name="modifyMachine"),
+    path("repairRequests", views.repairRequests, name="repairRequests"),
+    path("addRepairRequest", views.addRepairRequest, name="addRepairRequest"),
+    path("deleteRepairRequest/<int:id>", views.deleteRepairRequest, name="deleteRepairRequest"),
+    path("modifyRepairRequest/<int:id>/", views.modifyRepairRequest, name="modifyRepairRequest"),
+
 
     # API Routes (from api_views)
     path("api/login/", api_views.login_user, name="api_login"),
