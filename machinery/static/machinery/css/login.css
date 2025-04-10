@@ -131,10 +131,6 @@ border-radius:1rem;
     text-decoration: none;
 }
 
-.forgot{
-    margin-top:2rem;
-    margin-left:20%;
-}
 
 .welcome-msg {
     background-color: rgba(255, 250, 255, 0.296);
@@ -149,20 +145,6 @@ border-radius:1rem;
 
 .highlight-text {
     color: rgb(192, 146, 59);
-}
-
-.forgot-label {
-    color: rgba(0, 0, 0, 0.378);
-}
-
-.forgot-link {
-    font-size: 1.25rem;
-    cursor: pointer;
-    color: #D4AF37;
-    background-color: rgba(255, 250, 255, 0.628);
-    display: inline;
-    padding: 0.3rem;
-    text-decoration: none;
 }
 
 .welcome-text {
