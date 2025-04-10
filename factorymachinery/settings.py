@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'machinery',
     'rest_framework',
     'corsheaders',
-    'bootstrap5',
     'rest_framework.authtoken'
 ]
 

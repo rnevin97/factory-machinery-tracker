@@ -148,3 +148,14 @@ option:disabled{
     text-decoration: underline;
 }
 
+.form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    height: unset;
+}
+
+.page_1 {
+    background-size: cover;
+    height: unset;
+}

@@ -5,13 +5,18 @@ function initialisePage() {
         e.preventDefault();
     
         const formData = new FormData(this);
-        const username = formData.get("username");
+        const username = formData.get("userName");
         const password = formData.get("password");
+        const role = formData.get("role");
+        const email = formData.get("email");
+        const firstName = formData.get("firstName");
+        const lastName = formData.get("lastName");
+        const companyName = formData.get("companyName");
     
         const registerRes = await fetch("/api/register/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({ username, password, role, email, firstName, lastName, companyName })
         });
         
        

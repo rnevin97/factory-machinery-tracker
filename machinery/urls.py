@@ -17,6 +17,7 @@ urlpatterns = [
     path("technicians", views.technicians, name="technicians"),
     path("addMachine", views.addMachine, name="addMachine"),
     path("deleteMachine/<int:id>", views.deleteMachine, name="deleteMachine"),
+    path("modifyMachine/<int:id>/", views.modifyMachine, name="modifyMachine"),
 
     # API Routes (from api_views)
     path("api/login/", api_views.login_user, name="api_login"),
