@@ -136,3 +136,46 @@ border-radius:1rem;
     margin-left:20%;
 }
 
+.welcome-msg {
+    background-color: rgba(255, 250, 255, 0.296);
+    display: inline;
+    padding: 0.3rem;
+    margin-left: 5rem;
+    text-underline-offset: 2px;
+    font-size: 1rem;
+    color: rgba(69, 54, 98, 0.751);
+    font-weight: 550;
+}
+
+.highlight-text {
+    color: rgb(192, 146, 59);
+}
+
+.forgot-label {
+    color: rgba(0, 0, 0, 0.378);
+}
+
+.forgot-link {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #D4AF37;
+    background-color: rgba(255, 250, 255, 0.628);
+    display: inline;
+    padding: 0.3rem;
+    text-decoration: none;
+}
+
+.welcome-text {
+    margin-top: 13rem;
+    text-align: center;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: white;
+}
+
+.signup-link {
+    text-decoration: none;
+    color: white;
+}
