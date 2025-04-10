@@ -58,6 +58,7 @@ def login_user(request):
         token, created = Token.objects.get_or_create(user=user)
         try:
             role = UserProfile.objects.get(user=user).role
+            request.session['user_role'] = role
         except UserProfile.DoesNotExist:
             role = None
         return Response({'token': token.key, 'role': role, "redirect_url": "/dashboard"})

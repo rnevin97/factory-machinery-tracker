@@ -22,11 +22,17 @@ class Machine(models.Model):
         return f"{self.name} ({self.serial_number})"
 
 class RepairRequest(models.Model):
+    STATUS_CHOICES = [
+        ('Pending', 'Pending'),
+        ('In Progress', 'In Progress'),
+        ('Resolved', 'Resolved'),
+    ]
     issue_description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=50)
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='Pending')
     assigned_to = models.CharField(max_length=100)  # You can also use FK to User
     machine = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    raised_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='repair_requests')
     resolved = models.BooleanField(default=False)
 
     def __str__(self):
