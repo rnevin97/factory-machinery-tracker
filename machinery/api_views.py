@@ -92,7 +92,7 @@ class RegistrationAPIView(APIView):
 
         user = User.objects.create_user(username=username, password=password, email=email, first_name=firstName, last_name=lastName)
         UserProfile.objects.create(user=user, role=role)
-        Company.objects.create(name=company, email=email, job_title=role)
+        Company.objects.create(name=company, email=email, job_title=role, user_id=user.id)
         Token.objects.create(user=user)
 
         return Response({'message': 'User registered successfully.', "redirect_url": "/login"}, status=status.HTTP_201_CREATED)

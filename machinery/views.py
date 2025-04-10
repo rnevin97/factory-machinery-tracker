@@ -26,7 +26,7 @@ def dashboard(request):
     return render(request, "machinery/dashboard.html")
 
 def machines(request):
-    data = Machine.objects.all()
+    data = Machine.objects.filter(company_id=Company.objects.get(user=request.session.get('id')).id)
     return render(request, "machinery/machines.html", {'data': data})
 
 def technicians(request):
