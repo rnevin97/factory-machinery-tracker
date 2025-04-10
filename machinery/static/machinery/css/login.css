@@ -29,10 +29,8 @@ border-radius:1rem;
 .welcome_page{
     height:100%;
     width:55%;
-    /*background: linear-gradient(to right,red,rgb(255, 0, 162));
-    background-color:rgb(235, 179, 73);*/
-    background-color:rgb(192, 146, 59);
-    background:linear-gradient(to bottom,rgb(59, 156, 114),rgb(1, 103, 54));
+    background-color: #D4AF37;
+    background: linear-gradient(to bottom, #D4AF37, #B8912F);
     color:white;
     display:flex;
     align-items:center;
@@ -56,7 +54,7 @@ border-radius:1rem;
 .title{
     margin-top:7rem;
     font-size: 3rem;
-    color:rgb(1, 103, 54);
+    color:#D4AF37;
     margin-left:15%;
     font-weight: 500;
     line-height: 1rem;
@@ -85,7 +83,7 @@ border-radius:1rem;
     height: 5.5vh;
     max-width:20vw;
     color:rgba(69, 54, 98, 0.889);
-    background-color: rgba(167, 229, 186, 0.494); /* Change this to any color you prefer */
+    background-color: rgba(240, 240, 240, 0.5); /* subtle and modern */
     display:block; 
     /*background-color: rgba(254, 248, 255, 0.511);*/
     
@@ -102,7 +100,7 @@ border-radius:1rem;
 .sign_in{
     color:white;
     /*background: linear-gradient(to bottom, rgba(83, 0, 128, 0.891), rgb(114, 0, 32));*/
-    background-color:rgb(1, 103, 54);
+    background-color:#D4AF37;
     outline:none;
     border:none;
     border-radius: 2rem;
