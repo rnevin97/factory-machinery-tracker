@@ -8,7 +8,13 @@
 
 ![image](https://github.com/user-attachments/assets/df01fee6-2174-4dfb-a237-5a5ce1c5898c)
 
-![image](https://github.com/user-attachments/assets/1e0ab332-56a6-41ed-b354-47cf0668fd99)
+![AddMachine](https://github.com/user-attachments/assets/cd07ec14-2806-4cfb-9bdf-57236dd1bca3)
+
+
+![image](https://github.com/user-attachments/assets/5d600740-eef5-4506-88e1-b21f1cbcf462)
+
+
+
 
 ![alt text](IssueScreen.PNG) 
 
