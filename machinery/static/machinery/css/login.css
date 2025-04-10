@@ -56,7 +56,6 @@ border-radius:1rem;
 .title{
     margin-top:7rem;
     font-size: 3rem;
-    color:rgba(69, 54, 98, 0.751);
     color:rgb(1, 103, 54);
     margin-left:15%;
     font-weight: 500;
@@ -103,7 +102,6 @@ border-radius:1rem;
 .sign_in{
     color:white;
     /*background: linear-gradient(to bottom, rgba(83, 0, 128, 0.891), rgb(114, 0, 32));*/
-    background-color:rgba(69, 54, 98, 0.491);
     background-color:rgb(1, 103, 54);
     outline:none;
     border:none;
