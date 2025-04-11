@@ -29,4 +29,5 @@ urlpatterns = [
     path("api/logout/", api_views.logout_user, name="api_logout"),
     path("api/register/", api_views.RegistrationAPIView.as_view(), name="api_register"),
     path("api/token-auth/", obtain_auth_token),
+    path('api/getDashboardData/', api_views.getDashboardData, name='getDashboardData'),
 ]

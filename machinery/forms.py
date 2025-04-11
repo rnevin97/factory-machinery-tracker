@@ -4,8 +4,11 @@ from .models import Machine, RepairRequest
 class MachineForm(forms.ModelForm):
     class Meta:
         model = Machine
-        fields = ('id','name','serial_number','importance','status')
-
+        fields = ('id', 'name', 'serial_number', 'importance', 'status')
+        widgets = {
+            'status': forms.Select(),
+            'importance' : forms.Select(),
+        }
 
 class RepairRequestForm(forms.ModelForm):
     class Meta:
