@@ -1,5 +1,7 @@
 # factory-machinery-tracker
 
+![Dashboard](https://github.com/user-attachments/assets/121e4194-9811-46d8-b41a-630195331178)
+
 ![image](https://github.com/user-attachments/assets/11ba8bd1-d6d7-4858-a0e1-2a812790007b)
 
 ![image](https://github.com/user-attachments/assets/6a3094b8-ba5f-419e-87a2-1be8aa65ad8c)
