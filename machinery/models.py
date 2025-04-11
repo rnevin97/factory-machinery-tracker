@@ -12,11 +12,20 @@ class Company(models.Model):
         return self.name
 
 class Machine(models.Model):
+    STATUS_CHOICES = [
+        ('Working', 'Working'),
+        ('Need Repair', 'Need Repair'),
+    ]
+    IMPORTANCE_CHOICES = [
+        ('Low', 'Low'),
+        ('Medium', 'Medium'),
+        ('High', 'High'),
+    ]
     name = models.CharField(max_length=100)
     serial_number = models.CharField(max_length=100, unique=True)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    importance = models.IntegerField()
-    status = models.CharField(max_length=50)
+    importance = models.CharField(max_length=50, choices=IMPORTANCE_CHOICES, default='High')
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='Working')
 
     def __str__(self):
         return f"{self.name} ({self.serial_number})"
