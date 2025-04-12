@@ -20,8 +20,11 @@
                 <div class="dropdown-content">
                     <h1>SyncWare</h1>
                     <a href="/dashboard" title="Dashboard : Navigation Menu">Dashboard</a>
-                    <a href="/machines" title="Machines : Navigation Menu">Machines</a>    
-                    <a href="/technicians" title="Technicians : Navigation Menu">Technicians</a>
+                    <a href="/machines" title="Machines : Navigation Menu">Machines</a> 
+                    <a href="/repairRequests" title="Repair Requests : Navigation Menu">Repair Requests</a> 
+                    {% if user_role == 'Manager' %}   
+                        <a href="/technicians" title="Technicians : Navigation Menu">Technicians</a>
+                    {% endif %}
                     <a href="/logout" title="Logout : Navigation Menu">Logout</a>
                 </div>
                 <div class="main-content-area">
@@ -31,5 +34,6 @@
             </div>
         </main>
     </div>
+    <script src="{% static 'machinery/js/dashboard.js'%}"></script>
 </body>
 </html>

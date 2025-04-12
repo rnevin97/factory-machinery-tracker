@@ -6,9 +6,51 @@
 
 {% block extra_style %}
  <link rel="stylesheet" href="{% static 'machinery/css/dashboard.css' %}">
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
  {% endblock %}
 
 {% block content %}
-    <h1>Welcome</h1>
-    <p>Welcome to Dashboard</p>
+    <header>
+      <h1>Dashboard</h1>
+    </header>
+
+    <!-- Info Cards -->
+    <div class="cards">
+      <div class="card blue">
+        <h3>Total Machines</h3>
+        <p id="total-machines">--</p>
+      </div>
+      <div class="card red">
+        <h3>Total Repair Requests</h3>
+        <p id="repair-requests">--</p>
+      </div>
+      <div class="card green">
+        <h3>Technicians Available</h3>
+        <p id="available-techs">--</p>
+      </div>
+    </div>
+
+    <div style="height: 400px; display: flex;  justify-content: center;">
+      <canvas id="statusChart"></canvas>
+    </div>
+
+    <!-- Machine Overview Table -->
+    <section class="machine-overview">
+      <h2>Machine Overview</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Serial Number</th>
+            <th>Status</th>
+            <th>Importance</th>
+          </tr>
+        </thead>
+        <tbody id="machine-table-body">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </section>
 {% endblock %}

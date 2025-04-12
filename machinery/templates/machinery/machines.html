@@ -10,7 +10,9 @@
 
 {% block content %}
     <h1>Machines</h1>
-    <a href="/addMachine"> <button>New Machine</button></a>
+    {% if user_role == 'Manager' %}  
+        <a href="/addMachine"> <button>New Machine</button></a>
+    {% endif %}
     <table id="machines-table">
         <thead>
             <tr>
@@ -20,7 +22,9 @@
                 <th>Serial Number</th>
                 <th>Importance</th>
                 <th>Status</th>
-                <th>Action</th>
+                {% if user_role == 'Manager' %} 
+                    <th>Action</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
@@ -33,10 +37,14 @@
                     <td>{{machine.serial_number}}</td>
                     <td>{{machine.importance}}</td>
                     <td>{{machine.status}}</td>
-                    <td>
-                        <a href="/modifyMachine/{{machine.id}}"><button class="modify">Modify</button></a>
-                        <a href="/deleteMachine/{{machine.id}}"><button class="delete">Delete</button></a>
-                    </td>
+                   
+                        {% if user_role == 'Manager' %}  
+                        <td>
+                            <a href="/modifyMachine/{{machine.id}}"><button class="modify">Modify</button></a>
+                            <a href="/deleteMachine/{{machine.id}}"><button class="delete">Delete</button></a>
+                        </td>
+                        {% endif %}
+                   
                   </tr>
                 {% endfor %}
             {% endif %}

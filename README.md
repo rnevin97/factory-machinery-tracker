@@ -1,5 +1,7 @@
 # factory-machinery-tracker
 
+![Dashboard](https://github.com/user-attachments/assets/121e4194-9811-46d8-b41a-630195331178)
+
 ![image](https://github.com/user-attachments/assets/11ba8bd1-d6d7-4858-a0e1-2a812790007b)
 
 ![image](https://github.com/user-attachments/assets/6a3094b8-ba5f-419e-87a2-1be8aa65ad8c)
@@ -15,6 +17,38 @@
 
 
 
+
+![alt text](IssueScreen.PNG) 
+
+![alt text](<add_modify issue.PNG>)
+
+
+
+Overview of functionality
+Registration:
+•	User can register as a Manager or Technician
+•	During registration, a new company record will be created based on user input
+•	Manager of the company will be able to see all registered technicians under the same company
+Navigation Menu:
+•	Dashboard: in progress
+•	Machines: list all machines under the same company
+•	Repair Request: list of all the repair requests raised against the machines in the company
+•	Technicians: Only managers can see this option, which will list all technicians registered in the company
+Machines Page:
+•	Manager:
+o	New Machine Button: Only visible to managers, so only they can add machines.
+o	Managers can modify and delete the machines.
+o	When a machine is deleted, all corresponding issues against it will be deleted too.
+•	Technician:
+o	Technicians can only see the available machine, but they cannot add/modify/delete any
+Technician Page:
+•	Only visible to manager, list all technician and their details under the company
+Repair Requests Page:
+•	Manager:
+o	Manager can see all the issues raised against the machines in the company.
+o	They can only modify, change the request status , and delete it
+•	Technician:
+o	They can do all the task as Manager and also can raise new requests
 
 
 Testing Machine Page :
