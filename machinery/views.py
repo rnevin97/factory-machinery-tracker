@@ -23,7 +23,10 @@ def services(request):
     return render(request, "machinery/services.html")
 
 def dashboard(request):
-    return render(request, "machinery/dashboard.html")
+    total_machines = Machine.objects.count()
+    return render(request, "machinery/dashboard.html", {
+        'total_machines': total_machines
+    })
 
 def technicians(request):
     
