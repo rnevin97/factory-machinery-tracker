@@ -47,7 +47,10 @@
     margin-top: 80px;
     margin-left: 36px;
     color : white;
-    input[type=text] , textarea { /*input-type=text: a text input field, textarea: a multiline text input field*/
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"], 
+    textarea { /*input-type=text: a text input field, textarea: a multiline text input field*/
         width: 100%;
         padding: 12px;
         border: 1px solid gray;

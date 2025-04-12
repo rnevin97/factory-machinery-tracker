@@ -29,10 +29,8 @@ border-radius:1rem;
 .welcome_page{
     height:100%;
     width:55%;
-    /*background: linear-gradient(to right,red,rgb(255, 0, 162));
-    background-color:rgb(235, 179, 73);*/
-    background-color:rgb(192, 146, 59);
-    background:linear-gradient(to bottom,rgb(59, 156, 114),rgb(1, 103, 54));
+    background-color: #D4AF37;
+    background: linear-gradient(to bottom, #D4AF37, #B8912F);
     color:white;
     display:flex;
     align-items:center;
@@ -56,8 +54,7 @@ border-radius:1rem;
 .title{
     margin-top:7rem;
     font-size: 3rem;
-    color:rgba(69, 54, 98, 0.751);
-    color:rgb(1, 103, 54);
+    color:#D4AF37;
     margin-left:15%;
     font-weight: 500;
     line-height: 1rem;
@@ -72,28 +69,18 @@ border-radius:1rem;
 }
 
 .page_2 input {
-    outline:rgba(83, 0, 128, 0.891);
-    
-    padding-inline:1rem;
-    font-size:1rem;
+    padding-inline: 1rem;
+    font-size: 1rem;
     margin: 4px 5px;
     border-radius: 1.5rem;
-    /*border: 1px solid #cccccc4b;*/
-    border:none;
-    border: .5px solid #cccccc59;
-    box-shadow:0px 0px 5px rgba(40, 49, 61, 0.05);
-    /*box-shadow:0px 0px 5px rgba(40, 49, 61, 0.05);*/
+    border: 0.5px solid #cccccc59;
+    box-shadow: 0px 0px 5px rgba(40, 49, 61, 0.05);
     height: 5.5vh;
-    max-width:20vw;
-    color:rgba(69, 54, 98, 0.889);
-    background-color: rgba(167, 229, 186, 0.494); /* Change this to any color you prefer */
-    display:block; 
-    /*background-color: rgba(254, 248, 255, 0.511);*/
-    
+    max-width: 20vw;
+    color: rgba(69, 54, 98, 0.889);
+    background-color: rgba(240, 240, 240, 0.5);
+    display: block; 
 }
-/*    background-color: rgba(188, 168, 253, 0.202); /* Change this to any color you prefer */
-
-
 .page_2 label{
     color:grey;
     margin-bottom:.8rem;
@@ -102,9 +89,7 @@ border-radius:1rem;
 
 .sign_in{
     color:white;
-    /*background: linear-gradient(to bottom, rgba(83, 0, 128, 0.891), rgb(114, 0, 32));*/
-    background-color:rgba(69, 54, 98, 0.491);
-    background-color:rgb(1, 103, 54);
+    background-color:#D4AF37;
     outline:none;
     border:none;
     border-radius: 2rem;
@@ -135,8 +120,33 @@ border-radius:1rem;
     text-decoration: none;
 }
 
-.forgot{
-    margin-top:2rem;
-    margin-left:20%;
+
+.welcome-msg {
+    background-color: rgba(255, 250, 255, 0.296);
+    display: inline;
+    padding: 0.3rem;
+    margin-left: 5rem;
+    text-underline-offset: 2px;
+    font-size: 1rem;
+    color: rgba(69, 54, 98, 0.751);
+    font-weight: 550;
 }
 
+.highlight-text {
+    color: rgb(192, 146, 59);
+}
+
+.welcome-text {
+    margin-top: 13rem;
+    text-align: center;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: white;
+}
+
+.signup-link {
+    text-decoration: none;
+    color: white;
+}

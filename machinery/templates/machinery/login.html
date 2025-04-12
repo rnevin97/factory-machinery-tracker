@@ -1,4 +1,5 @@
 {% load static %}
+<!DOCTYPE html><!--DOCTYPE declaration defines the document type and version of HTML being used. It helps browsers to render the page correctly.-->
 <html lang="en">
 <!--Language of web page content is in english. it helps screen readers interpret and read the content correctly for users with disabilities-->
 
@@ -32,50 +33,39 @@
                 <div class="clear"></div>
             </div>
 
-            <main> <!--precious added code  in the main tag-->
-                <div class="container" ;>
+            <main>
+                <div class="container">
                     <div class="page_2">
-                        <div class="title">welcome back
-                            <div style="background-color: rgba(255, 250, 255, 0.296); 
-                            display:inline;padding:.3rem;margin-left:5rem;
-                            text-underline-offset:2px;
-                            font-size: 1rem;color:rgba(69, 54, 98, 0.751);
-                            font-weight:550">
-                                <br><br>Thank you for getting back to us,<br> <span
-                                    style="color: rgb(192, 146, 59);color:rgb(1, 103, 54);">please login to access your
-                                    account</span>
+                        <div class="title">
+                            Welcome Back
+                            <div class="welcome-msg">
+                                <br><br>Thank you for getting back to us,<br>
+                                <span class="highlight-text">please login to access your account</span>
                             </div>
                         </div>
+            
                         <form class="form" onsubmit="return check()" id="loginForm" method="post">
-                            <div class=grid1>
-
-                                <input name="username" type="text" id="username" placeholder="username..." required
-                                    autocomplete="off"
-                                    onfocusout="checkField(this);"><!--invalid email thats all should say on submit-->
-                                <input name="password" type="password" placeholder="Password..." id="password" required
-                                    minlength="5" maxlength="50" pattern="^(?=.*[\W_]).{5,50}$"
-                                    title="Password must be 8-50 characters long and include at least one special character."
-                                    onfocusout="checkField(this);">
+                            <div class="grid1">
+                                <input name="username" type="text" id="username" placeholder="username..." required autocomplete="off" onfocusout="checkField(this);">
+                                <input name="password" type="password" placeholder="Password..." id="password" required minlength="5" maxlength="50" pattern="^(?=.*[\W_]).{5,50}$" title="Password must be 5-50 characters long and include at least one special character." onfocusout="checkField(this);">
                             </div>
                             <div>
-                                <button class="sign_in">LOG IN </button>
+                                <button class="sign_in">LOG IN</button>
                             </div>
-                        </form>
-                        <div class="forgot">
-                            <span style="color:rgba(0, 0, 0, 0.378);">Forgot your password? </span> <span
-                                style="font-size:1.25rem;cursor:pointer;color: rgb(192, 146, 59);color:rgb(1, 103, 54);background-color: rgba(255, 250, 255, 0.628);display:inline;padding:.3rem;">
-                                click the link</span>
-                        </div>
+                        </form>           
                     </div>
+            
                     <div class="welcome_page">
-                        <span style="margin-top:13rem; text-align:center;">Welcome Back!<br>Log in to continue<br>
-                            <span style="font-size:1rem;color:white">Don't have an account yet?
-                                <a style="text-decoration:none;color:white;" href="/register"> Sign up </a> </span>
-                        </span>
+                        <div class="welcome-text">
+                            Welcome Back!<br>Log in to continue<br>
+                            <span class="subtext">
+                                Don't have an account yet?
+                                <a class="signup-link" href="/register"> Sign up </a>
+                            </span>
+                        </div>
                         <a href="/register">
-                            <button class="sign_up" type="submit">
-                                SIGN UP
-                            </button></a>
+                            <button class="sign_up" type="button">SIGN UP</button>
+                        </a>
                     </div>
                 </div>
             </main>
