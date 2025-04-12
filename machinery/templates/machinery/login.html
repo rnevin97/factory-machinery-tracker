@@ -47,7 +47,7 @@
                         <form class="form" onsubmit="return check()" id="loginForm" method="post">
                             <div class="grid1">
                                 <input name="username" type="text" id="username" placeholder="username..." required autocomplete="off" onfocusout="checkField(this);">
-                                <input name="password" type="password" placeholder="Password..." id="password" required minlength="8" maxlength="50" pattern="^(?=.*[\W_]).{8,50}$" title="Password must be 8-50 characters long and include at least one special character." onfocusout="checkField(this);">
+                                <input name="password" type="password" placeholder="Password..." id="password" required minlength="5" maxlength="50" pattern="^(?=.*[\W_]).{5,50}$" title="Password must be 5-50 characters long and include at least one special character." onfocusout="checkField(this);">
                             </div>
                             <div>
                                 <button class="sign_in">LOG IN</button>
