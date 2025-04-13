@@ -22,6 +22,7 @@ urlpatterns = [
     path("addRepairRequest", views.addRepairRequest, name="addRepairRequest"),
     path("deleteRepairRequest/<int:id>", views.deleteRepairRequest, name="deleteRepairRequest"),
     path("modifyRepairRequest/<int:id>/", views.modifyRepairRequest, name="modifyRepairRequest"),
+    path("logout", views.logoutUser, name="logout"),
 
 
     # API Routes (from api_views)
