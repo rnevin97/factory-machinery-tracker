@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .models import Machine, Company, RepairRequest
 from .forms import MachineForm, RepairRequestForm
 from django.contrib.auth.models import User
+from django.contrib.auth import logout
+from django.shortcuts import redirect
 
 def index(request):
     return render(request, "machinery/index.html")
@@ -30,6 +32,10 @@ def dashboard(request):
         'total_machines': total_machines,
         'repair_requests': total_repairs
     })
+
+def logoutUser(request):
+    logout(request)
+    return redirect('/login')
 
 def technicians(request):
     

@@ -24,7 +24,7 @@
 
 
 
-Overview of functionality
+# Overview of functionality
 Registration:
 •	User can register as a Manager or Technician
 •	During registration, a new company record will be created based on user input
@@ -60,8 +60,7 @@ INSERT INTO machinery_machine (id, name , serial_number, importance, status, com
 
 
 
-
-How to run a django project
+# How to run a django project
 
 1. git clone https://github.com/rnevin97/factory-machinery-tracker.git
 
@@ -76,6 +75,14 @@ How to run a django project
     pip install -r requirements.txt
 
 5. run following command from dir where manage.py file is present
-    python manage.py runserver
+	python manage.py makemigrations
+	python manage.py migrate
+	python manage.py runserver
 
 6. Server will be up running at following address 127.0.0.1:8000
+
+
+# Notes
+
+If running locally and experiencing login issues, try opening an new icognito window. It's because Django uses cookies to store session information. 
+If your login view and the admin are using the same session cookie, there could be some weird behavior.
