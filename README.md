@@ -60,7 +60,6 @@ INSERT INTO machinery_machine (id, name , serial_number, importance, status, com
 
 
 
-
 # How to run a django project
 
 1. git clone https://github.com/rnevin97/factory-machinery-tracker.git
@@ -76,9 +75,6 @@ INSERT INTO machinery_machine (id, name , serial_number, importance, status, com
     pip install -r requirements.txt
 
 5. run following command from dir where manage.py file is present
-    python manage.py runserver
-
-6. run following command from dir where manage.py file is present
 	python manage.py makemigrations
 	python manage.py migrate
 	python manage.py runserver
@@ -88,5 +84,5 @@ INSERT INTO machinery_machine (id, name , serial_number, importance, status, com
 
 # Notes
 
-If running locally and experience login issues, try opening an new icognito window. It's because Django uses cookies to store session information. 
+If running locally and experiencing login issues, try opening an new icognito window. It's because Django uses cookies to store session information. 
 If your login view and the admin are using the same session cookie, there could be some weird behavior.
