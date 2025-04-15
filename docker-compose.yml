@@ -2,25 +2,10 @@ version: '3.9'
 services:
   web:
     build: .
-    command: >
-      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "sleep 5 && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
     volumes:
       - .:/app
     environment:
       - DJANGO_SETTINGS_MODULE=factorymachinery.settings
-
-  db:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: factorydb
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:

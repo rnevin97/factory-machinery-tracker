@@ -81,8 +81,75 @@ INSERT INTO machinery_machine (id, name , serial_number, importance, status, com
 
 6. Server will be up running at following address 127.0.0.1:8000
 
+# How to run using docker
+
+open your terminal 
+docker-compose up
+
 
 # Notes
 
+Errors encountered
+Locally:
 If running locally and experiencing login issues, try opening an new icognito window. It's because Django uses cookies to store session information. 
 If your login view and the admin are using the same session cookie, there could be some weird behavior.
+
+Docker:
+If you see errors like:
+
+> `sqlite3.OperationalError: duplicate column name: raised_by_id`
+
+You might have stale migrations or an old database file.
+
+To reset:
+In terminal
+# Stop Docker
+docker-compose down
+
+# Remove SQLite DB file
+rm db.sqlite3
+
+# Delete old migration files (optional but clean)
+rm machinery/migrations/0*.py
+
+# Recreate migrations
+docker-compose run web python manage.py makemigrations
+docker-compose run web python manage.py migrate
+/////
+# How to Run Using Docker
+
+Open your terminal and run:
+docker-compose up
+
+# Notes
+
+## Errors Encountered
+
+### Locally
+
+If running locally and experiencing login issues, try opening a new incognito window.  
+This happens because Django uses cookies to store session information.  
+If your login view and the admin are using the same session cookie, there may be unexpected behavior.
+
+### Docker
+
+If you see errors like:
+
+sqlite3.OperationalError: duplicate column name: raised_by_id
+
+You might have stale migrations or an old database file.
+
+#### To Reset:
+
+1. **Stop Docker**  
+   docker-compose down
+  
+2. **Remove SQLite DB file**  
+   rm db.sqlite3
+
+3. **Delete old migration files (optional but clean)**  
+   rm machinery/migrations/0*.py
+
+4. **Recreate migrations**  
+   docker-compose run web python manage.py makemigrations
+   docker-compose run web python manage.py migrate
